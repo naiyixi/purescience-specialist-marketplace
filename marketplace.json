@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "revision": "2026-08-19-1",
+  "marketplace": {
+    "id": "purescience-official",
+    "name": "PureScience Specialist Marketplace"
+  },
+  "specialists": []
+}
