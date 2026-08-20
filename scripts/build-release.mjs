@@ -90,9 +90,11 @@ if (existsSync(skillsDir)) {
 }
 
 // ---- pack zip via system zip (deterministic-ish; -X strips attrs) ----
-mkdirSync(join(ROOT, 'dist'), { recursive: true })
+// Output goes to releases/ (NOT dist/, which is gitignored): the zip must be committed to the
+// published branch so jsDelivr can serve it as the artifact CDN for CN users.
+mkdirSync(join(ROOT, 'releases'), { recursive: true })
 const zipName = `${specialistId}-${version}.zip`
-const zipAbs = join(ROOT, 'dist', zipName)
+const zipAbs = join(ROOT, 'releases', zipName)
 execFileSync('zip', ['-q', '-r', '-X', zipAbs, ...packageFiles.map((f) => f.rel)], { cwd: src })
 const zipBytes = readFileSync(zipAbs)
 const artifactSha256 = createHash('sha256').update(zipBytes).digest('hex')
@@ -114,7 +116,6 @@ const release = {
   skills,
   connectors: []
 }
-mkdirSync(join(ROOT, 'releases'), { recursive: true })
 writeFileSync(join(ROOT, 'releases', `${specialistId}-${version}.json`), JSON.stringify(release, null, 2) + '\n')
 
 // ---- update marketplace.json root ----
