@@ -1,9 +1,26 @@
 {
   "schema_version": 1,
-  "revision": "2026-08-19-1",
+  "revision": "2026-08-20-1",
   "marketplace": {
     "id": "purescience-official",
     "name": "PureScience Specialist Marketplace"
   },
-  "specialists": []
+  "specialists": [
+    {
+      "id": "example-researcher",
+      "display_name": "示例研究员",
+      "summary": "演示专家市场安装流程的示例专才：内置文献检索技能，验证 市场发现 → 签名验证 → 安装 全链路。",
+      "publisher": {
+        "id": "naiyixi",
+        "name": "Naiyixi"
+      },
+      "latest": {
+        "version": "1.0.0",
+        "release": {
+          "path": "releases/example-researcher-1.0.0.json",
+          "sha256": "ae82bd076405332f8b7191958627e7f2bb7130235a9736982ff95ffad1b2fa31"
+        }
+      }
+    }
+  ]
 }

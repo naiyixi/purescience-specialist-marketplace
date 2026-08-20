@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "specialist_id": "example-researcher",
+  "version": "1.0.0",
+  "source": {
+    "repository": "https://github.com/naiyixi/purescience-specialist-marketplace",
+    "commit": "256201e1f634ed6b8989ff7c35944649225efcca",
+    "license": "MIT"
+  },
+  "artifact": {
+    "path": "releases/example-researcher-1.0.0.zip",
+    "github_release": {
+      "tag": "example-researcher-v1.0.0",
+      "asset_name": "example-researcher-1.0.0.zip"
+    },
+    "sha256": "ae82bd076405332f8b7191958627e7f2bb7130235a9736982ff95ffad1b2fa31",
+    "compressed_bytes": 1299,
+    "uncompressed_bytes": 1236,
+    "file_count": 3
+  },
+  "defaults": {
+    "skill_ids": [
+      "example-literature-search"
+    ],
+    "connector_ids": []
+  },
+  "skills": [
+    {
+      "id": "example-literature-search",
+      "name": "example-literature-search",
+      "display_name": "example-literature-search",
+      "description": "示例文献检索：按关键词检索论文标题与摘要并返回可引用列表。",
+      "path": "skills/example-literature-search",
+      "content_digest": "300213694188554941eb7bab9a64e831341938a5c1adf6f976cd015412a62012",
+      "file_count": 1,
+      "uncompressed_bytes": 601
+    }
+  ],
+  "connectors": []
+}

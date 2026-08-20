@@ -10,7 +10,8 @@
 // the signed marketplace.json + marketplace.json.sig are pushed to the `published` branch.
 
 import { execFileSync } from 'node:child_process'
-import { createHash, createSign, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs'
+import { createHash, sign } from 'node:crypto'
+import { mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs'
 import { join, relative } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -134,17 +135,17 @@ root.revision = `${new Date().toISOString().slice(0, 10)}-${root.specialists.len
 writeFileSync(rootPath, JSON.stringify(root, null, 2) + '\n')
 
 // ---- sign the root ----
-sign(rootPath)
+signRoot(rootPath)
 
 console.log(`==> packed  ${zipAbs} (${zipBytes.length} bytes, sha256 ${artifactSha256.slice(0, 16)}…)`)
 console.log(`    release ${specialistId}-${version}.json (${skills.length} skills, ${fileCount} files)`)
 console.log(`    root    marketplace.json (${root.specialists.length} specialists) + marketplace.json.sig`)
 console.log(`    upload  ${zipName} to GitHub release "${tag}", then push marketplace.json(.sig) to published`)
 
-function sign(filePath) {
+function signRoot(filePath) {
   const bytes = readFileSync(filePath)
   const key = readFileSync(SIGNING_KEY, 'utf8')
-  const signature = createSign(null).update(bytes).end().sign(key).toString('base64')
+  const signature = sign(null, bytes, key).toString('base64')
   const pub = readFileSync(join(ROOT, 'scripts', 'marketplace-public.pem'), 'utf8')
   const pubDer = pub.replace(/-----[^-]+-----/g, '').replace(/\s+/g, '')
   const sig = {
