@@ -55,6 +55,20 @@ const specialRoot = readFileSync(join(src, 'specialist.json'), 'utf8')
 const manifestDoc = JSON.parse(readFileSync(join(src, 'manifest.json'), 'utf8'))
 const specialist = JSON.parse(specialRoot)
 
+// ---- system prompt source resolution ----
+// Large prompts are authored as system-prompt.md next to specialist.json; when present it is
+// the canonical source and is injected into the packed specialist.json at build time.
+const promptFile = join(src, 'system-prompt.md')
+const resolvedSystemPrompt = (() => {
+  const fromFile = existsSync(promptFile) ? readFileSync(promptFile, 'utf8') : null
+  if (fromFile !== null && fromFile.trim() !== '') return fromFile
+  if (typeof specialist.systemPrompt === 'string' && specialist.systemPrompt.trim() !== '') {
+    return specialist.systemPrompt
+  }
+  console.error('error: system prompt missing — provide specialist.json systemPrompt or system-prompt.md')
+  process.exit(1)
+})()
+
 // ---- walk files (sorted for determinism) ----
 const walk = (dir) => {
   const out = []
@@ -147,6 +161,13 @@ try {
     const dest = join(stage, f.rel)
     mkdirSync(dirname(dest), { recursive: true })
     copyFileSync(f.abs, dest)
+  }
+  // system-prompt.md is the canonical prompt source: inject it into the packed specialist.json.
+  if (existsSync(promptFile)) {
+    const packedSpec = join(stage, 'specialist.json')
+    const packed = JSON.parse(readFileSync(packedSpec, 'utf8'))
+    packed.systemPrompt = resolvedSystemPrompt
+    writeFileSync(packedSpec, JSON.stringify(packed, null, 2) + '\n')
   }
   execFileSync('zip', ['-q', '-r', '-X', zipAbs, '.'], { cwd: stage })
 } finally {
