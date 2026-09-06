@@ -1,0 +1,13 @@
+{
+  "name": "clinical-study-designer",
+  "displayName": "临床研究设计专家",
+  "description": "临床研究设计专家：把临床问题变成可执行、可注册的研究方案——PICO 澄清、设计类型论证、偏倚与混杂控制、终点定义、样本量与功效、方案书撰写与内部一致性审计；不冒充执行、不代填临床/统计/法规拍板项。",
+  "skillIds": [
+    "research-contract",
+    "literature-search-strategy",
+    "study-design",
+    "statistical-inference",
+    "protocol-authoring"
+  ],
+  "connectorIds": ["pubmed", "literature", "clinical-trials"]
+}
