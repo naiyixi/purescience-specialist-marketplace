@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": "2026-09-06-7",
+  "revision": "2026-09-07-7",
   "marketplace": {
     "id": "purescience-official",
     "name": "PureScience Specialist Marketplace"
@@ -18,7 +18,7 @@
         "version": "1.0.0",
         "release": {
           "path": "releases/example-researcher-1.0.0.json",
-          "sha256": "ae82bd076405332f8b7191958627e7f2bb7130235a9736982ff95ffad1b2fa31"
+          "sha256": "491a573b12329353e6578eaf5ea0c80afffed20542443117d0cd45e14fa3cd82"
         }
       }
     },
@@ -34,7 +34,7 @@
         "version": "1.0.0",
         "release": {
           "path": "releases/auto-research-co-scientist-1.0.0.json",
-          "sha256": "2caf62cbf6193e17717cd38661bc79ff09bdef5f312a03c40bccc31c28aaca17"
+          "sha256": "c3438f521a340e26fb97ef29b9742794fb37628c3c5359a8695bbc8c1d311544"
         }
       }
     },
@@ -50,7 +50,7 @@
         "version": "1.0.0",
         "release": {
           "path": "releases/evidence-synthesis-specialist-1.0.0.json",
-          "sha256": "6442216dd62c4c26164bac48130728141b6c2dc8e8ebbeeed828c75c5c631250"
+          "sha256": "38c5e468b3e4bee919cefd7364711c056b73be969b040750c62a0823882df0c6"
         }
       }
     },
@@ -66,7 +66,7 @@
         "version": "1.0.0",
         "release": {
           "path": "releases/clinical-study-designer-1.0.0.json",
-          "sha256": "3f42232ef32e7163ab565c35a4b6930a2c27b4e63155ae1c4d788b983c455643"
+          "sha256": "8f302f636a4b24cacb2cf0d917342e0dc8e2cf7b2a9ab36b4be9c9c9e1e6df37"
         }
       }
     },
@@ -82,7 +82,7 @@
         "version": "1.0.0",
         "release": {
           "path": "releases/omics-biomarker-specialist-1.0.0.json",
-          "sha256": "d7729cd7c0eae1d9f41c58f0c090c2db62f19d85372168f95520ef58a54842f9"
+          "sha256": "fb5769b1519040cf3d2ee7ac66dcd803be34ce19787d21a7c42d068141ed9ecd"
         }
       }
     },
@@ -98,7 +98,7 @@
         "version": "1.0.0",
         "release": {
           "path": "releases/rwe-research-specialist-1.0.0.json",
-          "sha256": "216caf8faffc52ee94763a3470820b24c8f36c093b45d3e6db4b2445ec673b98"
+          "sha256": "ed03c5b71fa5cc3be5b4053e7d36b361d89c7ae70adb232172b5d9518fee2a40"
         }
       }
     },
@@ -114,7 +114,7 @@
         "version": "1.0.0",
         "release": {
           "path": "releases/pkpd-dose-designer-1.0.0.json",
-          "sha256": "184c7f059eb1613dfec512f9fc0f18e4e328050cc1270cf560eb41a28af36d66"
+          "sha256": "1f96fbef2b7436daab62c1d8f316744cc93669242c69635917171f83cf43c337"
         }
       }
     }
