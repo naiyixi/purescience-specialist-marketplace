@@ -11,8 +11,18 @@
 
 import { execFileSync } from 'node:child_process'
 import { createHash, sign } from 'node:crypto'
-import { mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs'
-import { join, relative } from 'node:path'
+import {
+  copyFileSync,
+  mkdirSync,
+  mkdtempSync,
+  readdirSync,
+  readFileSync,
+  rmSync,
+  statSync,
+  writeFileSync
+} from 'node:fs'
+import { tmpdir } from 'node:os'
+import { dirname, join, relative } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const ROOT = join(fileURLToPath(new URL('.', import.meta.url)), '..')
@@ -44,7 +54,6 @@ const src = join(ROOT, 'specials', specialistId)
 const specialRoot = readFileSync(join(src, 'specialist.json'), 'utf8')
 const manifestDoc = JSON.parse(readFileSync(join(src, 'manifest.json'), 'utf8'))
 const specialist = JSON.parse(specialRoot)
-const skillsDir = join(src, 'skills')
 
 // ---- walk files (sorted for determinism) ----
 const walk = (dir) => {
@@ -57,37 +66,72 @@ const walk = (dir) => {
   return out
 }
 
-const packageFiles = walk(src)
-  .filter((f) => relative(src, f) !== '')
-  .map((f) => ({ abs: f, rel: relative(src, f) }))
-  .filter((f) => !f.rel.includes('/.'))
-const uncompressedBytes = packageFiles.reduce((sum, f) => sum + statSync(f.abs).size, 0)
-const fileCount = packageFiles.length
-
-// ---- skills metadata ----
-const skills = []
-if (existsSync(skillsDir)) {
-  for (const skillId of readdirSync(skillsDir).sort()) {
-    const skillDir = join(skillsDir, skillId)
-    if (!statSync(skillDir).isDirectory()) continue
-    const files = walk(skillDir)
-    const digest = createHash('sha256')
-    for (const f of files) digest.update(readFileSync(f))
-    const skillDoc = readFileSync(join(skillDir, 'SKILL.md'), 'utf8')
-    const nameMatch = /^name:\s*(.+)$/m.exec(skillDoc)
-    const descMatch = /^description:\s*(.+)$/m.exec(skillDoc)
-    skills.push({
-      id: skillId,
-      name: skillId,
-      display_name: nameMatch?.[1]?.trim() ?? skillId,
-      description: descMatch?.[1]?.trim() ?? '',
-      path: `skills/${skillId}`,
-      content_digest: digest.digest('hex'),
-      file_count: files.length,
-      uncompressed_bytes: files.reduce((sum, f) => sum + statSync(f).size, 0)
-    })
+// ---- shared-skill resolution ----
+// Skill IDs declared in specialist.json skillIds resolve to the specialist's own
+// skills/<id>/ directory first, then to the shared library specials/_shared/<id>/.
+// Shared skills are authored once under _shared/ and inlined into each release zip,
+// so the same content digest ships everywhere and no specialist duplicates files.
+const SHARED_ROOT = join(ROOT, 'specials', '_shared')
+const localSkillsDir = join(src, 'skills')
+const resolveSkillDir = (id) => {
+  const local = join(localSkillsDir, id)
+  if (existsSync(local) && statSync(local).isDirectory()) return local
+  const shared = join(SHARED_ROOT, id)
+  if (existsSync(shared) && statSync(shared).isDirectory()) return shared
+  return null
+}
+const declaredSkillIds = Array.isArray(specialist.skillIds) ? [...specialist.skillIds] : []
+const localSkillDirs = existsSync(localSkillsDir)
+  ? readdirSync(localSkillsDir).filter((d) => statSync(join(localSkillsDir, d)).isDirectory())
+  : []
+// Drift guard: a local bundled skill that is not declared is a package error.
+for (const id of localSkillDirs) {
+  if (!declaredSkillIds.includes(id)) {
+    console.error(`error: local skill dir skills/${id} exists but is not declared in specialist.json skillIds`)
+    process.exit(1)
   }
 }
+
+const skills = []
+const skillEntries = [] // { abs, rel } with rel rooted at the zip root
+for (const skillId of declaredSkillIds) {
+  const dir = resolveSkillDir(skillId)
+  if (!dir) {
+    console.error(
+      `error: declared skill "${skillId}" not found under skills/ nor specials/_shared/`
+    )
+    process.exit(1)
+  }
+  const files = walk(dir)
+  for (const f of files) skillEntries.push({ abs: f, rel: `skills/${skillId}/${relative(dir, f)}` })
+  const skillDoc = readFileSync(join(dir, 'SKILL.md'), 'utf8')
+  const nameMatch = /^name:\s*(.+)$/m.exec(skillDoc)
+  const descMatch = /^description:\s*(.+)$/m.exec(skillDoc)
+  const digest = createHash('sha256')
+  for (const f of files) digest.update(readFileSync(f))
+  skills.push({
+    id: skillId,
+    name: skillId,
+    display_name: nameMatch?.[1]?.trim() ?? skillId,
+    description: descMatch?.[1]?.trim() ?? '',
+    path: `skills/${skillId}`,
+    content_digest: digest.digest('hex'),
+    file_count: files.length,
+    uncompressed_bytes: files.reduce((sum, f) => sum + statSync(f).size, 0)
+  })
+}
+
+// Specialist-owned files (everything except its skills/ tree, which is now
+// represented exclusively by the resolved skill entries above).
+const srcEntries = walk(src)
+  .filter((f) => {
+    const rel = relative(src, f)
+    return rel !== '' && !rel.includes('/.') && !rel.startsWith(`skills${'/'.charAt(0)}`)
+  })
+  .map((f) => ({ abs: f, rel: relative(src, f) }))
+const packageFiles = [...srcEntries, ...skillEntries]
+const uncompressedBytes = packageFiles.reduce((sum, f) => sum + statSync(f.abs).size, 0)
+const fileCount = packageFiles.length
 
 // ---- pack zip via system zip (deterministic-ish; -X strips attrs) ----
 // Output goes to releases/ (NOT dist/, which is gitignored): the zip must be committed to the
@@ -95,7 +139,19 @@ if (existsSync(skillsDir)) {
 mkdirSync(join(ROOT, 'releases'), { recursive: true })
 const zipName = `${specialistId}-${version}.zip`
 const zipAbs = join(ROOT, 'releases', zipName)
-execFileSync('zip', ['-q', '-r', '-X', zipAbs, ...packageFiles.map((f) => f.rel)], { cwd: src })
+// Stage the resolved file set (specialist files + inlined shared skills) into a
+// temp tree so zip entries always carry the canonical skills/<id>/ prefix.
+const stage = mkdtempSync(join(tmpdir(), 'ps-release-'))
+try {
+  for (const f of packageFiles) {
+    const dest = join(stage, f.rel)
+    mkdirSync(dirname(dest), { recursive: true })
+    copyFileSync(f.abs, dest)
+  }
+  execFileSync('zip', ['-q', '-r', '-X', zipAbs, '.'], { cwd: stage })
+} finally {
+  rmSync(stage, { recursive: true, force: true })
+}
 const zipBytes = readFileSync(zipAbs)
 const artifactSha256 = createHash('sha256').update(zipBytes).digest('hex')
 
