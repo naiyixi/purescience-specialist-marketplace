@@ -213,7 +213,7 @@ const entry = {
 const idx = root.specialists.findIndex((s) => s.id === specialistId)
 if (idx >= 0) root.specialists[idx] = entry
 else root.specialists.push(entry)
-root.revision = `${new Date().toISOString().slice(0, 10)}-${root.specialists.length}`
+root.revision = `${new Date().toISOString().slice(0, 10)}-${root.specialists.length}-${execFileSync('git', ['rev-parse', '--short=7', 'HEAD'], { cwd: ROOT }).toString().trim()}`
 // The root digest for a release is the sha256 of the release DOCUMENT bytes: the app verifies
 // the fetched release doc against this digest (artifact.sha256 covers the zip itself).
 const releaseDoc = readFileSync(join(ROOT, 'releases', `${specialistId}-${version}.json`))

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": "2026-09-07-7b",
+  "revision": "2026-09-06-7-a94b460",
   "marketplace": {
     "id": "purescience-official",
     "name": "PureScience Specialist Marketplace"
@@ -34,7 +34,7 @@
         "version": "1.0.0",
         "release": {
           "path": "releases/auto-research-co-scientist-1.0.0.json",
-          "sha256": "3947dc79565b99b3b21f73105a9c1cd5df67124edd0a7b9a4a31a57e71548e6c"
+          "sha256": "6a3abf4202ac1ee0eee78919c43c428fb205a14d408191c3b897e479a2395a35"
         }
       }
     },
@@ -50,7 +50,7 @@
         "version": "1.0.0",
         "release": {
           "path": "releases/evidence-synthesis-specialist-1.0.0.json",
-          "sha256": "7e99378dd8338c305de11b7e79e03a4b5acd47324573ee5cea4b88fd3005cd65"
+          "sha256": "69479430443b8e49d744e4ecc179fa48620705417275b9c29b3b6b487eba6396"
         }
       }
     },
@@ -66,7 +66,7 @@
         "version": "1.0.0",
         "release": {
           "path": "releases/clinical-study-designer-1.0.0.json",
-          "sha256": "df2fc0c2cbd04152c0a4225c1e99b2c8e79ace0772c4eb8cfaa00743d4a24ea9"
+          "sha256": "bbd47ae0f8dad2c31ab0593bf90925de01057440f9b34de9a1057abf14f90a09"
         }
       }
     },
@@ -82,7 +82,7 @@
         "version": "1.0.0",
         "release": {
           "path": "releases/omics-biomarker-specialist-1.0.0.json",
-          "sha256": "6d285d0f5b0b542e702e684365113e86da6cb638b74121080a381c30c5c6efe9"
+          "sha256": "d31f34a8f5f08b6cc079051edf5e06d8be5f09e7b61d2dce21d56207484682f9"
         }
       }
     },
@@ -98,7 +98,7 @@
         "version": "1.0.0",
         "release": {
           "path": "releases/rwe-research-specialist-1.0.0.json",
-          "sha256": "61739b6c75140ec520be7a8a33628a1813712794be5bbdfcc19173c2b3271868"
+          "sha256": "4bf3f91d106e5c75d77ca48b5e651296342d469f051df99fffad8b15696178e4"
         }
       }
     },
@@ -114,7 +114,7 @@
         "version": "1.0.0",
         "release": {
           "path": "releases/pkpd-dose-designer-1.0.0.json",
-          "sha256": "e9a9c1a88ea30f90296ec33b16238ff4411441fa3b3174ea90c7da2141d83364"
+          "sha256": "ddf623b6b932f3adfa0b96a56122e582f415bf6c547cc40cb3cf11aec2fc4b89"
         }
       }
     }

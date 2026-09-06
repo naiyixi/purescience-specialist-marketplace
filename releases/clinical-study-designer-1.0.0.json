@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "source": {
     "repository": "https://github.com/naiyixi/purescience-specialist-marketplace",
-    "commit": "f4e96d1c99513b3baf15e085ae4d111856e4825f",
+    "commit": "a94b4605afad6efc1b3a7403e811d09a385f1519",
     "license": "MIT"
   },
   "artifact": {
@@ -13,8 +13,8 @@
       "tag": "clinical-study-designer-v1.0.0",
       "asset_name": "clinical-study-designer-1.0.0.zip"
     },
-    "sha256": "3f42232ef32e7163ab565c35a4b6930a2c27b4e63155ae1c4d788b983c455643",
-    "compressed_bytes": 39018,
+    "sha256": "e5bda3c6091004bb84a1de10f49e8b8aec7af661b649f5a3882f549f3a3e25ec",
+    "compressed_bytes": 39021,
     "uncompressed_bytes": 54357,
     "file_count": 17
   },
@@ -29,7 +29,7 @@
     "connector_ids": [
       "pubmed",
       "literature",
-      "clinical-trials"
+      "clinical_trials"
     ]
   },
   "skills": [
@@ -96,7 +96,7 @@
       "default_selected": true
     },
     {
-      "id": "clinical-trials",
+      "id": "clinical_trials",
       "required": false,
       "default_selected": true
     }

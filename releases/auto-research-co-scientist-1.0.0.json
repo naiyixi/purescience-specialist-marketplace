@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "source": {
     "repository": "https://github.com/naiyixi/purescience-specialist-marketplace",
-    "commit": "f4e96d1c99513b3baf15e085ae4d111856e4825f",
+    "commit": "a94b4605afad6efc1b3a7403e811d09a385f1519",
     "license": "MIT"
   },
   "artifact": {
@@ -13,8 +13,8 @@
       "tag": "auto-research-co-scientist-v1.0.0",
       "asset_name": "auto-research-co-scientist-1.0.0.zip"
     },
-    "sha256": "2caf62cbf6193e17717cd38661bc79ff09bdef5f312a03c40bccc31c28aaca17",
-    "compressed_bytes": 59957,
+    "sha256": "4bf49ae7390a64a93a522b1276c5bd702042656cca902edca7dad41d1a4e9e97",
+    "compressed_bytes": 59966,
     "uncompressed_bytes": 82522,
     "file_count": 26
   },
@@ -32,26 +32,26 @@
     "connector_ids": [
       "pubmed",
       "literature",
-      "clinical-trials",
+      "clinical_trials",
       "biorxiv",
       "genes",
       "genomes",
       "expression",
-      "protein-annotation",
+      "protein_annotation",
       "structures",
       "rna",
       "regulation",
       "biomart",
-      "clinical-genomics",
-      "human-genetics",
-      "drug-regulatory",
-      "cancer-models",
-      "research-resources",
+      "clinical_genomics",
+      "human_genetics",
+      "drug_regulatory",
+      "cancer_models",
+      "research_resources",
       "chembl",
       "chemistry",
       "molecule",
       "zinc",
-      "omics-archives",
+      "omics_archives",
       "variants",
       "cellguide"
     ]
@@ -150,7 +150,7 @@
       "default_selected": true
     },
     {
-      "id": "clinical-trials",
+      "id": "clinical_trials",
       "required": false,
       "default_selected": true
     },
@@ -175,7 +175,7 @@
       "default_selected": true
     },
     {
-      "id": "protein-annotation",
+      "id": "protein_annotation",
       "required": false,
       "default_selected": true
     },
@@ -200,27 +200,27 @@
       "default_selected": true
     },
     {
-      "id": "clinical-genomics",
+      "id": "clinical_genomics",
       "required": false,
       "default_selected": true
     },
     {
-      "id": "human-genetics",
+      "id": "human_genetics",
       "required": false,
       "default_selected": true
     },
     {
-      "id": "drug-regulatory",
+      "id": "drug_regulatory",
       "required": false,
       "default_selected": true
     },
     {
-      "id": "cancer-models",
+      "id": "cancer_models",
       "required": false,
       "default_selected": true
     },
     {
-      "id": "research-resources",
+      "id": "research_resources",
       "required": false,
       "default_selected": true
     },
@@ -245,7 +245,7 @@
       "default_selected": true
     },
     {
-      "id": "omics-archives",
+      "id": "omics_archives",
       "required": false,
       "default_selected": true
     },

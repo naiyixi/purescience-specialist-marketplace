@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "source": {
     "repository": "https://github.com/naiyixi/purescience-specialist-marketplace",
-    "commit": "f4e96d1c99513b3baf15e085ae4d111856e4825f",
+    "commit": "a94b4605afad6efc1b3a7403e811d09a385f1519",
     "license": "MIT"
   },
   "artifact": {
@@ -13,8 +13,8 @@
       "tag": "rwe-research-specialist-v1.0.0",
       "asset_name": "rwe-research-specialist-1.0.0.zip"
     },
-    "sha256": "216caf8faffc52ee94763a3470820b24c8f36c093b45d3e6db4b2445ec673b98",
-    "compressed_bytes": 36986,
+    "sha256": "d01cc63e82566f9d3d50885921d02742f79a30c95dcd758966ad0b1efc63111e",
+    "compressed_bytes": 36991,
     "uncompressed_bytes": 51609,
     "file_count": 17
   },
@@ -29,8 +29,8 @@
     "connector_ids": [
       "pubmed",
       "literature",
-      "clinical-trials",
-      "research-resources"
+      "clinical_trials",
+      "research_resources"
     ]
   },
   "skills": [
@@ -97,12 +97,12 @@
       "default_selected": true
     },
     {
-      "id": "clinical-trials",
+      "id": "clinical_trials",
       "required": false,
       "default_selected": true
     },
     {
-      "id": "research-resources",
+      "id": "research_resources",
       "required": false,
       "default_selected": true
     }
