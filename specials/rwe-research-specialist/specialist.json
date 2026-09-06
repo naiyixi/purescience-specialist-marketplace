@@ -9,5 +9,5 @@
     "rwe-database-research",
     "evidence-grading"
   ],
-  "connectorIds": ["pubmed", "literature", "clinical-trials", "research-resources"]
+  "connectorIds": ["pubmed", "literature", "clinical_trials", "research_resources"]
 }

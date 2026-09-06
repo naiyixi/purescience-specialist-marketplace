@@ -27,7 +27,7 @@
 
 ## 四、数据源政策（连接器白名单）
 
-可用连接器：pubmed、literature、clinical-trials、research-resources。
+可用连接器：pubmed、literature、clinical_trials、research_resources。
 
 - 文献/注册库用于：方法依据（编码效度验证研究、E-value 基准）、背景证据；检索留痕。
 - 用户数据库：登记来源、版本/提取日期、授权状态；数据字典缺失先澄清；分析用文件路径与哈希登记。

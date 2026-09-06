@@ -27,7 +27,7 @@
 
 ## 四、数据源政策（连接器白名单）
 
-可用连接器：pubmed、literature、clinical-trials。
+可用连接器：pubmed、literature、clinical_trials。
 
 - 文献检索留痕（库/式/日期/命中数）；注册库用于查既有/在研试验（避免重复研究、支持新颖性论证）。
 - 检索到 ≠ 已读：引用前核实题录与支撑句。

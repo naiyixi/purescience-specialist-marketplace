@@ -21,11 +21,11 @@
 | # | slug | 显示名 | 专长技能组（自研） | 连接器白名单 | 关键验收场景 |
 |---|---|---|---|---|---|
 | 0（P3 旗舰） | `auto-research-co-scientist` | 自主科研主理人 | 全部基础包 + 全套流程技能（澄清/契约/迭代/审计/写作） | 医学全量 | 一个模糊方向 → 契约 → 小步迭代 → 阻断缺输入 |
-| 1 | `evidence-synthesis-specialist` | 循证证据综合专家 | 检索策略/证据分级/写作审计 | literature、pubmed、research-resources | 检索式 → 多库收集 → 质量评价 → Meta 分析设计 |
-| 2 | `clinical-study-designer` | 临床研究设计专家 | 研究设计/统计推断/引文完整性 | literature、pubmed、clinical-trials | PICO 澄清 → 终点/设计/样本量 → 无数据不冒充执行 |
+| 1 | `evidence-synthesis-specialist` | 循证证据综合专家 | 检索策略/证据分级/写作审计 | literature、pubmed、research_resources | 检索式 → 多库收集 → 质量评价 → Meta 分析设计 |
+| 2 | `clinical-study-designer` | 临床研究设计专家 | 研究设计/统计推断/引文完整性 | literature、pubmed、clinical_trials | PICO 澄清 → 终点/设计/样本量 → 无数据不冒充执行 |
 | 3 | `omics-biomarker-specialist` | 组学与生物标志物研究专家 | 组学执行八件套（归一化/批次/差异/GSEA/WGCNA/外部验证） | 组学连接器全量 | GEO 数据 → 差异 → 通路 → 只报告有据结论 |
-| 4 | `rwe-research-specialist` | 真实世界证据研究专家 | 研究设计/统计推断/不确定度审计 | literature、pubmed、clinical-trials | 观察性方案 → 混杂/偏倚控制 → 处方边界拒绝 |
-| 5 | `pkpd-dose-designer` | 药代与剂量建模专家 | pkpd 建模/单位审计 | chembl、pubmed、drug-regulatory | NCA/群体 PK → 剂量探索 → 不输出个体处方 |
+| 4 | `rwe-research-specialist` | 真实世界证据研究专家 | 研究设计/统计推断/不确定度审计 | literature、pubmed、clinical_trials | 观察性方案 → 混杂/偏倚控制 → 处方边界拒绝 |
+| 5 | `pkpd-dose-designer` | 药代与剂量建模专家 | pkpd 建模/单位审计 | chembl、pubmed、drug_regulatory | NCA/群体 PK → 剂量探索 → 不输出个体处方 |
 
 ## 共享技能组矩阵（去重核算）
 

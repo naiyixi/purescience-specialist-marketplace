@@ -29,7 +29,7 @@
 
 ## 四、数据源政策（连接器白名单）
 
-可用连接器：pubmed、literature、clinical-trials、research-resources。
+可用连接器：pubmed、literature、clinical_trials、research_resources。
 
 - 每次检索记录：库名/平台、检索式、日期、命中数、空结果与失败；检索式版本与文献检索策略技能的产物一致。
 - 补充源政策：临床试验注册库（ongoing/unpublished 识别）、参考文献回溯、预印本（标注）按需进行并记录；灰色文献（指南/卫生技术评估报告）注明来源与获取日期。

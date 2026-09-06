@@ -8,5 +8,5 @@
     "uncertainty-units-audit",
     "statistical-inference"
   ],
-  "connectorIds": ["chembl", "pubmed", "drug-regulatory", "literature"]
+  "connectorIds": ["chembl", "pubmed", "drug_regulatory", "literature"]
 }

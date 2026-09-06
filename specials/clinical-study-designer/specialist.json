@@ -9,5 +9,5 @@
     "statistical-inference",
     "protocol-authoring"
   ],
-  "connectorIds": ["pubmed", "literature", "clinical-trials"]
+  "connectorIds": ["pubmed", "literature", "clinical_trials"]
 }
