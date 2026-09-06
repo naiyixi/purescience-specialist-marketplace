@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "specialist_id": "omics-biomarker-specialist",
+  "version": "1.0.0",
+  "source": {
+    "repository": "https://github.com/naiyixi/purescience-specialist-marketplace",
+    "commit": "f4e96d1c99513b3baf15e085ae4d111856e4825f",
+    "license": "MIT"
+  },
+  "artifact": {
+    "path": "releases/omics-biomarker-specialist-1.0.0.zip",
+    "github_release": {
+      "tag": "omics-biomarker-specialist-v1.0.0",
+      "asset_name": "omics-biomarker-specialist-1.0.0.zip"
+    },
+    "sha256": "d7729cd7c0eae1d9f41c58f0c090c2db62f19d85372168f95520ef58a54842f9",
+    "compressed_bytes": 40674,
+    "uncompressed_bytes": 53794,
+    "file_count": 20
+  },
+  "defaults": {
+    "skill_ids": [
+      "research-contract",
+      "expression-data-prep",
+      "differential-expression",
+      "enrichment-analysis",
+      "signature-and-validation",
+      "statistical-inference",
+      "scientific-visualization"
+    ],
+    "connector_ids": [
+      "expression",
+      "omics-archives",
+      "genes",
+      "genomes",
+      "biomart",
+      "protein-annotation",
+      "regulation",
+      "rna",
+      "variants",
+      "clinical-genomics",
+      "human-genetics",
+      "literature",
+      "pubmed",
+      "research-resources"
+    ]
+  },
+  "skills": [
+    {
+      "id": "research-contract",
+      "name": "research-contract",
+      "display_name": "research-contract",
+      "description": "建立并管理研究契约（Research Contract）——自主科研与受控研究的\"不可变层\"。当启动一项需要受控迭代、预算管理或多次执行的研究时，用本技能把研究问题、人群/干预/对照/结局、终点、数据源、分析与停止规则固化成契约；任何中途变更都必须走\"新版本契约\"流程而非静默修改。也用于审计一次执行是否遵守了既定契约。不替代单次问答（一次性咨询不需要契约）；检索与执行细节归对应技能。",
+      "path": "skills/research-contract",
+      "content_digest": "dee1de1bc974aabac1cd43b8ba5fb10aba2b4d3e9b0e2267927913de4d767537",
+      "file_count": 2,
+      "uncompressed_bytes": 5325
+    },
+    {
+      "id": "expression-data-prep",
+      "name": "expression-data-prep",
+      "display_name": "expression-data-prep",
+      "description": "准备与质控批量表达数据（微阵列/RNA-seq 计数或矩阵）：数据形态识别、过滤与归一化方法选择、批次效应识别与校正、质控报告。当拿到表达矩阵/原始计数要做分析前处理、判断该用哪种归一化（如 TPM/CPM/quantile/RLE/voom）、怀疑批次效应并选择校正策略、或审计别人预处理是否合理时使用。不做差异检验本身（归 differential-expression）、不做无监督降维后的下游解释（PCA 等可视化作 QC 一部分）；数据来自用户文件或获批数据源，不编造矩阵内容。",
+      "path": "skills/expression-data-prep",
+      "content_digest": "370db21d478200e5a08367ee8fa6e966504f14ee2daea5fc75130153c7016ebc",
+      "file_count": 3,
+      "uncompressed_bytes": 6256
+    },
+    {
+      "id": "differential-expression",
+      "name": "differential-expression",
+      "display_name": "differential-expression",
+      "description": "设计并执行批量表达数据的差异表达分析（组间比较）：设计矩阵与对比、检验方法选择（limma/edgeR/DESeq2 类思路）、多重比较校正、结果表与诊断图、解读纪律。当拿到预处理后的表达矩阵/计数要做\"组 A vs 组 B 哪些基因变了\"、设计协变量与配对比较、评估差异分析质量或审计结果表是否可信时使用。不做预处理（归 expression-data-prep）、不做通路富集（归 enrichment-analysis）；单细胞差异分析属专用体系，超出本包范围要明说。",
+      "path": "skills/differential-expression",
+      "content_digest": "401d4914c42ba8f97e235927d7a45def31b2770c7876c1a788da6bb0977b33a1",
+      "file_count": 2,
+      "uncompressed_bytes": 4338
+    },
+    {
+      "id": "enrichment-analysis",
+      "name": "enrichment-analysis",
+      "display_name": "enrichment-analysis",
+      "description": "执行与解读功能富集分析（通路/基因集水平）：富集方法选择（ORA 过表达分析 vs GSEA 类排序富集 vs 单样本富集）、基因集库选择（GO/KEGG/通路/标志基因集）、背景集与多重比较、结果解读与常见陷阱。当拿到差异基因列表或全基因排序想做\"这些基因富集在什么通路\"、判断该用 ORA 还是 GSEA、评估富集结果是否可信（冗余/背景/方向）或审计他人富集图时使用。不替代差异分析（归 differential-expression）；基因集库的版本与版权以官方发布为准，不编造通路基因列表。",
+      "path": "skills/enrichment-analysis",
+      "content_digest": "b96ee9460d689e32435687ecba062041ad8e995abc54ff05777ffc1d6ba946cf",
+      "file_count": 2,
+      "uncompressed_bytes": 5093
+    },
+    {
+      "id": "signature-and-validation",
+      "name": "signature-and-validation",
+      "display_name": "signature-and-validation",
+      "description": "构建与验证表达特征/生物标志物（基因签名、网络模块）：特征选择（LASSO 类/共表达网络模块）、内部验证（切分/交叉验证）与外部验证（独立数据集）、性能指标与报告。当需要从高维表达数据筛出可验证的基因特征、评估签名在不同数据集的可复现性、判断\"这个生物标志物准不准\"（区分度/校准）、或审计他人签名研究是否过拟合/泄漏时使用。不做差异分析（归 differential-expression）；不做富集（归 enrichment-analysis）；临床预测建模的超参数调优纪律参照本包与 statistical-inference。",
+      "path": "skills/signature-and-validation",
+      "content_digest": "3778ee855bee0f4dd4e64b143a2a0b27ebfae481e0e7b70da5cd7de7fd274103",
+      "file_count": 2,
+      "uncompressed_bytes": 4989
+    },
+    {
+      "id": "statistical-inference",
+      "name": "statistical-inference",
+      "display_name": "statistical-inference",
+      "description": "指导已采集数据的统计分析：检验选择、假设核查、效应量与置信区间、多重比较、稳健替代与透明报告。当数据已到手、需要决定\"用什么检验/模型、怎么报结果\"时使用；也用于审计他人分析（p 值是否被误读、假设是否核查、多重比较是否校正）。不负责研究设计（随机化/分组/样本量估算在设计阶段由 study-design 负责）、不做不确定度传播的数值审计（归 uncertainty-units-audit）、不做生物信息学专门分析（差异表达等归各领域专包）；纯概念问题直接回答，不必走全流程。",
+      "path": "skills/statistical-inference",
+      "content_digest": "05f2d6afbb7e903a81f8a4cc2b7a0d3ce05c771fe435467a9d93645efd4c28e6",
+      "file_count": 3,
+      "uncompressed_bytes": 9878
+    },
+    {
+      "id": "scientific-visualization",
+      "name": "scientific-visualization",
+      "display_name": "scientific-visualization",
+      "description": "创建并审计真实、可读、可发表的科研图表。当需要决定\"这张数据用什么图、怎么画才不失真\"、检查一张图是否有误导性（截断坐标轴、双轴滥用、3D 饼图、颜色不可区分）、或准备出版级图表（尺寸/字体/导出格式）时使用。不替代统计推断（显著性标注依据来自 statistical-inference）；不做分子结构图/通路示意图等插画类图（归各自领域工具）；纯风格咨询（配色好不好看）直接给建议即可，不必走审计流程。",
+      "path": "skills/scientific-visualization",
+      "content_digest": "23749b15c68f5279d3688233d9269f54449aaa2a199f95f0fe5f1594f709e940",
+      "file_count": 3,
+      "uncompressed_bytes": 7887
+    }
+  ],
+  "connectors": []
+}

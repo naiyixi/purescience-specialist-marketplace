@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "specialist_id": "evidence-synthesis-specialist",
+  "version": "1.0.0",
+  "source": {
+    "repository": "https://github.com/naiyixi/purescience-specialist-marketplace",
+    "commit": "f4e96d1c99513b3baf15e085ae4d111856e4825f",
+    "license": "MIT"
+  },
+  "artifact": {
+    "path": "releases/evidence-synthesis-specialist-1.0.0.zip",
+    "github_release": {
+      "tag": "evidence-synthesis-specialist-v1.0.0",
+      "asset_name": "evidence-synthesis-specialist-1.0.0.zip"
+    },
+    "sha256": "6442216dd62c4c26164bac48130728141b6c2dc8e8ebbeeed828c75c5c631250",
+    "compressed_bytes": 43515,
+    "uncompressed_bytes": 59185,
+    "file_count": 20
+  },
+  "defaults": {
+    "skill_ids": [
+      "literature-search-strategy",
+      "evidence-quality-assessment",
+      "meta-analysis-methods",
+      "evidence-grading",
+      "citation-integrity",
+      "methods-writing-audit"
+    ],
+    "connector_ids": [
+      "pubmed",
+      "literature",
+      "clinical-trials",
+      "research-resources"
+    ]
+  },
+  "skills": [
+    {
+      "id": "literature-search-strategy",
+      "name": "literature-search-strategy",
+      "display_name": "literature-search-strategy",
+      "description": "为文献检索构建数据库级检索式。当用户需要把研究问题（PICO/PECO/PEO 或一般主题）转成 PubMed/Embase/Cochrane/MEDLINE/Web of Science 或中文库（CBM/CNKI/万方）可执行的检索式，需要主题词（MeSH/Emtree）+自由词扩展、布尔组合、字段限定、灵敏度与精确度权衡、检索过程留痕时使用。只设计检索式与检索计划，不实际执行检索（执行交给连接器或多库收集环节）；不做文献质量评价、不阅读全文、不编造检索结果或命中数量；已有完整检索式的场景不必重复构建。",
+      "path": "skills/literature-search-strategy",
+      "content_digest": "a8324eff7c0312e066d644b8ab02e3349b978b70337bc368dd86892bc2ea0d23",
+      "file_count": 3,
+      "uncompressed_bytes": 10214
+    },
+    {
+      "id": "evidence-quality-assessment",
+      "name": "evidence-quality-assessment",
+      "display_name": "evidence-quality-assessment",
+      "description": "对纳入证据综合的单篇研究做方法学质量/偏倚风险评价。当系统评价或证据报告需要给每篇纳入研究判定偏倚风险（RCT 用 RoB 2、非随机干预用 ROBINS-I、诊断准确性用 QUADAS-2、观察性病因/预后用相应工具），需要逐域判定并给出理由、把域级结果汇总成研究级风险、或审计既有评价是否正确应用工具时使用。不做证据体分级（那是 evidence-grading 的 GRADE 式综合）、不做检索（归 literature-search-strategy）；对非系统评价场景的简单\"这篇文献可不可信\"提问，先确认是否需要正式工具，不需要就直接给结构化阅读意见。",
+      "path": "skills/evidence-quality-assessment",
+      "content_digest": "f3e5b93faf7439976619a513f86171ad515a19d8e48d022513795073e36a79e4",
+      "file_count": 2,
+      "uncompressed_bytes": 5844
+    },
+    {
+      "id": "meta-analysis-methods",
+      "name": "meta-analysis-methods",
+      "display_name": "meta-analysis-methods",
+      "description": "设计与执行 Meta 分析（效应量选择、异质性处理、合并模型、发表偏倚、敏感性分析）。当系统评价需要把多个研究数量合并、判断能否合并（临床与方法学同质性）、选择固定/随机效应模型、量化与解释异质性（I²/Tau²）、做亚组/Meta 回归、评估发表偏倚或复核他人 Meta 分析的方法是否正确时使用。不检索（归 literature-search-strategy）、不做单篇质量评价（归 evidence-quality-assessment）、不写最终结论措辞（归 evidence-grading）；原始数据不足以支撑的合并必须如实降级为叙述性综合。",
+      "path": "skills/meta-analysis-methods",
+      "content_digest": "88f7f2df8914edc03a3dec14de483ee46d155bc81bafc79281389c8c654bebd9",
+      "file_count": 3,
+      "uncompressed_bytes": 7712
+    },
+    {
+      "id": "evidence-grading",
+      "name": "evidence-grading",
+      "display_name": "evidence-grading",
+      "description": "对证据体做确定性分级并把论断措辞校准到与证据强度匹配。当需要判断\"这批证据支持什么强度的结论\"、写结论/摘要/新闻稿时选择\"证明/表明/提示/与…一致\"等措辞、按 GRADE 式维度（偏倚风险、不一致、间接性、不精确、发表偏倚 + 升级因素）评估证据体、或审计他人论断是否超证据时使用。不检索证据（归 literature-search-strategy）、不评价单篇方法学质量细节（那是质量评价工具环节，属循证证据综合专家专包）、不做统计计算（归 statistical-inference）。",
+      "path": "skills/evidence-grading",
+      "content_digest": "17946907e0bed1f9cca613173f4a7030eff0fc18c85a7b9df0392dfb11d4c169",
+      "file_count": 3,
+      "uncompressed_bytes": 8366
+    },
+    {
+      "id": "citation-integrity",
+      "name": "citation-integrity",
+      "display_name": "citation-integrity",
+      "description": "核查引用与参考文献的真实性、可验证性与支撑关系。当需要验证 DOI/PMID/PMID/URL 是否存在且指向正确内容、检查\"这句话是否真的由所引文献支撑\"、处理二手引用（转引）、统一参考文献格式、或审计稿件是否存在编造/错配/幽灵引用时使用。不检索新证据（归 literature-search-strategy）、不评价证据强度（归 evidence-grading）；纯格式排版（GB/T 7714 与 Vancouver 样式细节）只做要点指引，不逐条排版。",
+      "path": "skills/citation-integrity",
+      "content_digest": "9f6ff0942b0463e4e9bf59eb16cc15685a5f44a5370243aadcf512961fb63226",
+      "file_count": 3,
+      "uncompressed_bytes": 7936
+    },
+    {
+      "id": "methods-writing-audit",
+      "name": "methods-writing-audit",
+      "display_name": "methods-writing-audit",
+      "description": "撰写与审计论文/报告的方法与结果章节。当需要把研究方案与数据变成符合报告规范的方法段与结果段、核对正文-表格-图之间的数字一致性、检查方法是否足以复现、或审计稿件方法与结果是否有缺失/夸大/不一致时使用。不负责结论与讨论的证据措辞校准（归 evidence-grading）；不做统计分析本身（归 statistical-inference）；不做引文管理（归 citation-integrity）。",
+      "path": "skills/methods-writing-audit",
+      "content_digest": "addc33e311f16745333983dc3bd80fc483ee98d39bd45552072cf181c534ffa7",
+      "file_count": 3,
+      "uncompressed_bytes": 8242
+    }
+  ],
+  "connectors": []
+}

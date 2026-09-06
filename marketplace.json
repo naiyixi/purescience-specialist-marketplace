@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": "2026-08-20-1",
+  "revision": "2026-09-06-7",
   "marketplace": {
     "id": "purescience-official",
     "name": "PureScience Specialist Marketplace"
@@ -19,6 +19,102 @@
         "release": {
           "path": "releases/example-researcher-1.0.0.json",
           "sha256": "ae82bd076405332f8b7191958627e7f2bb7130235a9736982ff95ffad1b2fa31"
+        }
+      }
+    },
+    {
+      "id": "auto-research-co-scientist",
+      "display_name": "自主科研主理人",
+      "summary": "自主科研主理人：把研究方向变成受控、可审计、小步迭代的研究序列——澄清问题、立研究契约、检索证据、获取获批数据、设计方案、分析执行、可靠性审计直至方法结果写作，全流程共创与执行；越界与深水区诚实转交对应领域专家。",
+      "publisher": {
+        "id": "naiyixi",
+        "name": "Naiyixi"
+      },
+      "latest": {
+        "version": "1.0.0",
+        "release": {
+          "path": "releases/auto-research-co-scientist-1.0.0.json",
+          "sha256": "2caf62cbf6193e17717cd38661bc79ff09bdef5f312a03c40bccc31c28aaca17"
+        }
+      }
+    },
+    {
+      "id": "evidence-synthesis-specialist",
+      "display_name": "循证证据综合专家",
+      "summary": "循证证据综合专家：把临床问题变成可审计的证据体——方案化检索、筛选、逐篇偏倚风险评价、数据提取、定量（Meta）或叙述性综合、证据确定性分级直至结论报告；可复现、可审计、结论措辞不超证据。",
+      "publisher": {
+        "id": "naiyixi",
+        "name": "Naiyixi"
+      },
+      "latest": {
+        "version": "1.0.0",
+        "release": {
+          "path": "releases/evidence-synthesis-specialist-1.0.0.json",
+          "sha256": "6442216dd62c4c26164bac48130728141b6c2dc8e8ebbeeed828c75c5c631250"
+        }
+      }
+    },
+    {
+      "id": "clinical-study-designer",
+      "display_name": "临床研究设计专家",
+      "summary": "临床研究设计专家：把临床问题变成可执行、可注册的研究方案——PICO 澄清、设计类型论证、偏倚与混杂控制、终点定义、样本量与功效、方案书撰写与内部一致性审计；不冒充执行、不代填临床/统计/法规拍板项。",
+      "publisher": {
+        "id": "naiyixi",
+        "name": "Naiyixi"
+      },
+      "latest": {
+        "version": "1.0.0",
+        "release": {
+          "path": "releases/clinical-study-designer-1.0.0.json",
+          "sha256": "3f42232ef32e7163ab565c35a4b6930a2c27b4e63155ae1c4d788b983c455643"
+        }
+      }
+    },
+    {
+      "id": "omics-biomarker-specialist",
+      "display_name": "组学与生物标志物研究专家",
+      "summary": "组学与生物标志物研究专家：批量表达数据的可复现研究流水线——数据准备与质控、批次校正、差异表达、通路富集、基因签名构建与内部/外部验证；防泄漏、防过拟合、外部验证失败如实报告。",
+      "publisher": {
+        "id": "naiyixi",
+        "name": "Naiyixi"
+      },
+      "latest": {
+        "version": "1.0.0",
+        "release": {
+          "path": "releases/omics-biomarker-specialist-1.0.0.json",
+          "sha256": "d7729cd7c0eae1d9f41c58f0c090c2db62f19d85372168f95520ef58a54842f9"
+        }
+      }
+    },
+    {
+      "id": "rwe-research-specialist",
+      "display_name": "真实世界证据研究专家",
+      "summary": "真实世界证据研究专家：用电子病历/医保/注册库等真实世界数据设计可辩护的观察性研究——目标试验模拟、新用药者与活性对照设计、队列操作化定义、倾向评分与未测量混杂量化（E-value/阴性对照）、时间相关偏倚防护；关联语言不越因果边界。",
+      "publisher": {
+        "id": "naiyixi",
+        "name": "Naiyixi"
+      },
+      "latest": {
+        "version": "1.0.0",
+        "release": {
+          "path": "releases/rwe-research-specialist-1.0.0.json",
+          "sha256": "216caf8faffc52ee94763a3470820b24c8f36c093b45d3e6db4b2445ec673b98"
+        }
+      }
+    },
+    {
+      "id": "pkpd-dose-designer",
+      "display_name": "药代与剂量建模专家",
+      "summary": "药代与剂量建模专家：浓度-时间与效应数据的可辩护 PK/PD 分析——NCA 与群体建模选择、单位与量纲零容忍审计、协变量效应、暴露-反应与剂量策略、模型验证与转化缩放；不输出个体处方、不把模型外推当实测。",
+      "publisher": {
+        "id": "naiyixi",
+        "name": "Naiyixi"
+      },
+      "latest": {
+        "version": "1.0.0",
+        "release": {
+          "path": "releases/pkpd-dose-designer-1.0.0.json",
+          "sha256": "184c7f059eb1613dfec512f9fc0f18e4e328050cc1270cf560eb41a28af36d66"
         }
       }
     }

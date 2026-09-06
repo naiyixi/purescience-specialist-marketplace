@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "specialist_id": "clinical-study-designer",
+  "version": "1.0.0",
+  "source": {
+    "repository": "https://github.com/naiyixi/purescience-specialist-marketplace",
+    "commit": "f4e96d1c99513b3baf15e085ae4d111856e4825f",
+    "license": "MIT"
+  },
+  "artifact": {
+    "path": "releases/clinical-study-designer-1.0.0.zip",
+    "github_release": {
+      "tag": "clinical-study-designer-v1.0.0",
+      "asset_name": "clinical-study-designer-1.0.0.zip"
+    },
+    "sha256": "3f42232ef32e7163ab565c35a4b6930a2c27b4e63155ae1c4d788b983c455643",
+    "compressed_bytes": 39018,
+    "uncompressed_bytes": 54357,
+    "file_count": 17
+  },
+  "defaults": {
+    "skill_ids": [
+      "research-contract",
+      "literature-search-strategy",
+      "study-design",
+      "statistical-inference",
+      "protocol-authoring"
+    ],
+    "connector_ids": [
+      "pubmed",
+      "literature",
+      "clinical-trials"
+    ]
+  },
+  "skills": [
+    {
+      "id": "research-contract",
+      "name": "research-contract",
+      "display_name": "research-contract",
+      "description": "建立并管理研究契约（Research Contract）——自主科研与受控研究的\"不可变层\"。当启动一项需要受控迭代、预算管理或多次执行的研究时，用本技能把研究问题、人群/干预/对照/结局、终点、数据源、分析与停止规则固化成契约；任何中途变更都必须走\"新版本契约\"流程而非静默修改。也用于审计一次执行是否遵守了既定契约。不替代单次问答（一次性咨询不需要契约）；检索与执行细节归对应技能。",
+      "path": "skills/research-contract",
+      "content_digest": "dee1de1bc974aabac1cd43b8ba5fb10aba2b4d3e9b0e2267927913de4d767537",
+      "file_count": 2,
+      "uncompressed_bytes": 5325
+    },
+    {
+      "id": "literature-search-strategy",
+      "name": "literature-search-strategy",
+      "display_name": "literature-search-strategy",
+      "description": "为文献检索构建数据库级检索式。当用户需要把研究问题（PICO/PECO/PEO 或一般主题）转成 PubMed/Embase/Cochrane/MEDLINE/Web of Science 或中文库（CBM/CNKI/万方）可执行的检索式，需要主题词（MeSH/Emtree）+自由词扩展、布尔组合、字段限定、灵敏度与精确度权衡、检索过程留痕时使用。只设计检索式与检索计划，不实际执行检索（执行交给连接器或多库收集环节）；不做文献质量评价、不阅读全文、不编造检索结果或命中数量；已有完整检索式的场景不必重复构建。",
+      "path": "skills/literature-search-strategy",
+      "content_digest": "a8324eff7c0312e066d644b8ab02e3349b978b70337bc368dd86892bc2ea0d23",
+      "file_count": 3,
+      "uncompressed_bytes": 10214
+    },
+    {
+      "id": "study-design",
+      "name": "study-design",
+      "display_name": "study-design",
+      "description": "设计研究方案（数据采集之前）：实验性设计（随机化、区组、分层、交叉、析因）与观察性设计（队列、病例对照、横断面）的选择与论证，混杂与偏倚控制、样本量与功效估算、伪重复防护。当用户要写研究方案/开题、设计试验或队列、估算样本量、评价一个既有设计是否会被混杂或偏倚毁掉时使用。不分析已采集数据（归 statistical-inference）；不做检索（归 literature-search-strategy）；不做剂量-暴露建模或真实世界数据库操作细节（归对应领域专包）。",
+      "path": "skills/study-design",
+      "content_digest": "e45fad672ba9e9914ff6023f0629f4c7d3f7c54a7d5d432f2071209de92a7f5b",
+      "file_count": 3,
+      "uncompressed_bytes": 9583
+    },
+    {
+      "id": "statistical-inference",
+      "name": "statistical-inference",
+      "display_name": "statistical-inference",
+      "description": "指导已采集数据的统计分析：检验选择、假设核查、效应量与置信区间、多重比较、稳健替代与透明报告。当数据已到手、需要决定\"用什么检验/模型、怎么报结果\"时使用；也用于审计他人分析（p 值是否被误读、假设是否核查、多重比较是否校正）。不负责研究设计（随机化/分组/样本量估算在设计阶段由 study-design 负责）、不做不确定度传播的数值审计（归 uncertainty-units-audit）、不做生物信息学专门分析（差异表达等归各领域专包）；纯概念问题直接回答，不必走全流程。",
+      "path": "skills/statistical-inference",
+      "content_digest": "05f2d6afbb7e903a81f8a4cc2b7a0d3ce05c771fe435467a9d93645efd4c28e6",
+      "file_count": 3,
+      "uncompressed_bytes": 9878
+    },
+    {
+      "id": "protocol-authoring",
+      "name": "protocol-authoring",
+      "display_name": "protocol-authoring",
+      "description": "撰写与审计临床研究方案书（protocol）：把研究设计落成结构完整、可执行、可注册的方案文档。当需要起草/完善试验方案（背景与依据、目的与终点、设计、受试者、干预、访视与评估、统计、伦理与合规、知情同意）、把统计分析计划（SAP）与方案衔接、或审计一份方案缺什么/内部是否一致时使用。不做设计方法选择本身（归 study-design）、不做检索（归 literature-search-strategy）、不替代伦理委员会与监管意见；方案中的任何数值（样本量、时间窗、界值）都必须有出处或明确标注待定。",
+      "path": "skills/protocol-authoring",
+      "content_digest": "34a84d4d6f59d725b133a7aebfdeaa919ccbd23a1eafb591852b7e9a14a52418",
+      "file_count": 3,
+      "uncompressed_bytes": 9394
+    }
+  ],
+  "connectors": []
+}

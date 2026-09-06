@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "specialist_id": "pkpd-dose-designer",
+  "version": "1.0.0",
+  "source": {
+    "repository": "https://github.com/naiyixi/purescience-specialist-marketplace",
+    "commit": "f4e96d1c99513b3baf15e085ae4d111856e4825f",
+    "license": "MIT"
+  },
+  "artifact": {
+    "path": "releases/pkpd-dose-designer-1.0.0.zip",
+    "github_release": {
+      "tag": "pkpd-dose-designer-v1.0.0",
+      "asset_name": "pkpd-dose-designer-1.0.0.zip"
+    },
+    "sha256": "184c7f059eb1613dfec512f9fc0f18e4e328050cc1270cf560eb41a28af36d66",
+    "compressed_bytes": 31654,
+    "uncompressed_bytes": 42802,
+    "file_count": 14
+  },
+  "defaults": {
+    "skill_ids": [
+      "research-contract",
+      "pkpd-modeling",
+      "uncertainty-units-audit",
+      "statistical-inference"
+    ],
+    "connector_ids": [
+      "chembl",
+      "pubmed",
+      "drug-regulatory",
+      "literature"
+    ]
+  },
+  "skills": [
+    {
+      "id": "research-contract",
+      "name": "research-contract",
+      "display_name": "research-contract",
+      "description": "建立并管理研究契约（Research Contract）——自主科研与受控研究的\"不可变层\"。当启动一项需要受控迭代、预算管理或多次执行的研究时，用本技能把研究问题、人群/干预/对照/结局、终点、数据源、分析与停止规则固化成契约；任何中途变更都必须走\"新版本契约\"流程而非静默修改。也用于审计一次执行是否遵守了既定契约。不替代单次问答（一次性咨询不需要契约）；检索与执行细节归对应技能。",
+      "path": "skills/research-contract",
+      "content_digest": "dee1de1bc974aabac1cd43b8ba5fb10aba2b4d3e9b0e2267927913de4d767537",
+      "file_count": 2,
+      "uncompressed_bytes": 5325
+    },
+    {
+      "id": "pkpd-modeling",
+      "name": "pkpd-modeling",
+      "display_name": "pkpd-modeling",
+      "description": "设计与执行药代动力学/药效学建模任务：非房室分析（NCA）、房室与群体 PK/PD、协变量筛选、暴露-反应/剂量探索、转化缩放与模型验证。当拿到浓度-时间数据要做 NCA 或建模、需要设计群体 PK 分析（结构模型/随机效应/协变量）、评估暴露-反应关系以支持剂量选择、或审计 PK/PD 分析的单位/模型/验证是否可靠时使用。不做个体化给药建议（不输出个体处方剂量）；单位与量纲错误是本领域最高频事故，全程联动 uncertainty-units-audit；临床前→临床转化需用户明确数据范围。",
+      "path": "skills/pkpd-modeling",
+      "content_digest": "945061291cf6d8950295705c8a6275c837337444c0b4c74e3c4d01d8d8d4690c",
+      "file_count": 3,
+      "uncompressed_bytes": 7575
+    },
+    {
+      "id": "uncertainty-units-audit",
+      "name": "uncertainty-units-audit",
+      "display_name": "uncertainty-units-audit",
+      "description": "审计科学计算中的单位、量纲、量级与测量不确定度。当需要做单位换算并验证其系数、检查公式两边量纲一致、评估数值量级是否合理（\"这个数对不对量级\"）、按不确定度传播规则合成标准不确定度（A/B 类、RSS 合成、扩展不确定度与包含因子 k=2）、决定有效数字与报告格式时使用。也用于审查他人推导中\"单位漏了/系数错了/±值含义不明\"的问题。不做统计推断的不确定性（检验/区间估计归统计推断技能）、不做模型预测区间或仿真随机性评估；纯概念性提问（\"不确定度是什么\"）直接回答即可，不必走完整审计流程。",
+      "path": "skills/uncertainty-units-audit",
+      "content_digest": "210d58fbe3969f3dd4d438eb4c03f504fcb9ede6a3068550c728a456426d214d",
+      "file_count": 3,
+      "uncompressed_bytes": 10264
+    },
+    {
+      "id": "statistical-inference",
+      "name": "statistical-inference",
+      "display_name": "statistical-inference",
+      "description": "指导已采集数据的统计分析：检验选择、假设核查、效应量与置信区间、多重比较、稳健替代与透明报告。当数据已到手、需要决定\"用什么检验/模型、怎么报结果\"时使用；也用于审计他人分析（p 值是否被误读、假设是否核查、多重比较是否校正）。不负责研究设计（随机化/分组/样本量估算在设计阶段由 study-design 负责）、不做不确定度传播的数值审计（归 uncertainty-units-audit）、不做生物信息学专门分析（差异表达等归各领域专包）；纯概念问题直接回答，不必走全流程。",
+      "path": "skills/statistical-inference",
+      "content_digest": "05f2d6afbb7e903a81f8a4cc2b7a0d3ce05c771fe435467a9d93645efd4c28e6",
+      "file_count": 3,
+      "uncompressed_bytes": 9878
+    }
+  ],
+  "connectors": []
+}

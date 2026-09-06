@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "specialist_id": "auto-research-co-scientist",
+  "version": "1.0.0",
+  "source": {
+    "repository": "https://github.com/naiyixi/purescience-specialist-marketplace",
+    "commit": "f4e96d1c99513b3baf15e085ae4d111856e4825f",
+    "license": "MIT"
+  },
+  "artifact": {
+    "path": "releases/auto-research-co-scientist-1.0.0.zip",
+    "github_release": {
+      "tag": "auto-research-co-scientist-v1.0.0",
+      "asset_name": "auto-research-co-scientist-1.0.0.zip"
+    },
+    "sha256": "2caf62cbf6193e17717cd38661bc79ff09bdef5f312a03c40bccc31c28aaca17",
+    "compressed_bytes": 59957,
+    "uncompressed_bytes": 82522,
+    "file_count": 26
+  },
+  "defaults": {
+    "skill_ids": [
+      "research-contract",
+      "literature-search-strategy",
+      "evidence-grading",
+      "statistical-inference",
+      "study-design",
+      "scientific-visualization",
+      "methods-writing-audit",
+      "citation-integrity"
+    ],
+    "connector_ids": [
+      "pubmed",
+      "literature",
+      "clinical-trials",
+      "biorxiv",
+      "genes",
+      "genomes",
+      "expression",
+      "protein-annotation",
+      "structures",
+      "rna",
+      "regulation",
+      "biomart",
+      "clinical-genomics",
+      "human-genetics",
+      "drug-regulatory",
+      "cancer-models",
+      "research-resources",
+      "chembl",
+      "chemistry",
+      "molecule",
+      "zinc",
+      "omics-archives",
+      "variants",
+      "cellguide"
+    ]
+  },
+  "skills": [
+    {
+      "id": "research-contract",
+      "name": "research-contract",
+      "display_name": "research-contract",
+      "description": "建立并管理研究契约（Research Contract）——自主科研与受控研究的\"不可变层\"。当启动一项需要受控迭代、预算管理或多次执行的研究时，用本技能把研究问题、人群/干预/对照/结局、终点、数据源、分析与停止规则固化成契约；任何中途变更都必须走\"新版本契约\"流程而非静默修改。也用于审计一次执行是否遵守了既定契约。不替代单次问答（一次性咨询不需要契约）；检索与执行细节归对应技能。",
+      "path": "skills/research-contract",
+      "content_digest": "dee1de1bc974aabac1cd43b8ba5fb10aba2b4d3e9b0e2267927913de4d767537",
+      "file_count": 2,
+      "uncompressed_bytes": 5325
+    },
+    {
+      "id": "literature-search-strategy",
+      "name": "literature-search-strategy",
+      "display_name": "literature-search-strategy",
+      "description": "为文献检索构建数据库级检索式。当用户需要把研究问题（PICO/PECO/PEO 或一般主题）转成 PubMed/Embase/Cochrane/MEDLINE/Web of Science 或中文库（CBM/CNKI/万方）可执行的检索式，需要主题词（MeSH/Emtree）+自由词扩展、布尔组合、字段限定、灵敏度与精确度权衡、检索过程留痕时使用。只设计检索式与检索计划，不实际执行检索（执行交给连接器或多库收集环节）；不做文献质量评价、不阅读全文、不编造检索结果或命中数量；已有完整检索式的场景不必重复构建。",
+      "path": "skills/literature-search-strategy",
+      "content_digest": "a8324eff7c0312e066d644b8ab02e3349b978b70337bc368dd86892bc2ea0d23",
+      "file_count": 3,
+      "uncompressed_bytes": 10214
+    },
+    {
+      "id": "evidence-grading",
+      "name": "evidence-grading",
+      "display_name": "evidence-grading",
+      "description": "对证据体做确定性分级并把论断措辞校准到与证据强度匹配。当需要判断\"这批证据支持什么强度的结论\"、写结论/摘要/新闻稿时选择\"证明/表明/提示/与…一致\"等措辞、按 GRADE 式维度（偏倚风险、不一致、间接性、不精确、发表偏倚 + 升级因素）评估证据体、或审计他人论断是否超证据时使用。不检索证据（归 literature-search-strategy）、不评价单篇方法学质量细节（那是质量评价工具环节，属循证证据综合专家专包）、不做统计计算（归 statistical-inference）。",
+      "path": "skills/evidence-grading",
+      "content_digest": "17946907e0bed1f9cca613173f4a7030eff0fc18c85a7b9df0392dfb11d4c169",
+      "file_count": 3,
+      "uncompressed_bytes": 8366
+    },
+    {
+      "id": "statistical-inference",
+      "name": "statistical-inference",
+      "display_name": "statistical-inference",
+      "description": "指导已采集数据的统计分析：检验选择、假设核查、效应量与置信区间、多重比较、稳健替代与透明报告。当数据已到手、需要决定\"用什么检验/模型、怎么报结果\"时使用；也用于审计他人分析（p 值是否被误读、假设是否核查、多重比较是否校正）。不负责研究设计（随机化/分组/样本量估算在设计阶段由 study-design 负责）、不做不确定度传播的数值审计（归 uncertainty-units-audit）、不做生物信息学专门分析（差异表达等归各领域专包）；纯概念问题直接回答，不必走全流程。",
+      "path": "skills/statistical-inference",
+      "content_digest": "05f2d6afbb7e903a81f8a4cc2b7a0d3ce05c771fe435467a9d93645efd4c28e6",
+      "file_count": 3,
+      "uncompressed_bytes": 9878
+    },
+    {
+      "id": "study-design",
+      "name": "study-design",
+      "display_name": "study-design",
+      "description": "设计研究方案（数据采集之前）：实验性设计（随机化、区组、分层、交叉、析因）与观察性设计（队列、病例对照、横断面）的选择与论证，混杂与偏倚控制、样本量与功效估算、伪重复防护。当用户要写研究方案/开题、设计试验或队列、估算样本量、评价一个既有设计是否会被混杂或偏倚毁掉时使用。不分析已采集数据（归 statistical-inference）；不做检索（归 literature-search-strategy）；不做剂量-暴露建模或真实世界数据库操作细节（归对应领域专包）。",
+      "path": "skills/study-design",
+      "content_digest": "e45fad672ba9e9914ff6023f0629f4c7d3f7c54a7d5d432f2071209de92a7f5b",
+      "file_count": 3,
+      "uncompressed_bytes": 9583
+    },
+    {
+      "id": "scientific-visualization",
+      "name": "scientific-visualization",
+      "display_name": "scientific-visualization",
+      "description": "创建并审计真实、可读、可发表的科研图表。当需要决定\"这张数据用什么图、怎么画才不失真\"、检查一张图是否有误导性（截断坐标轴、双轴滥用、3D 饼图、颜色不可区分）、或准备出版级图表（尺寸/字体/导出格式）时使用。不替代统计推断（显著性标注依据来自 statistical-inference）；不做分子结构图/通路示意图等插画类图（归各自领域工具）；纯风格咨询（配色好不好看）直接给建议即可，不必走审计流程。",
+      "path": "skills/scientific-visualization",
+      "content_digest": "23749b15c68f5279d3688233d9269f54449aaa2a199f95f0fe5f1594f709e940",
+      "file_count": 3,
+      "uncompressed_bytes": 7887
+    },
+    {
+      "id": "methods-writing-audit",
+      "name": "methods-writing-audit",
+      "display_name": "methods-writing-audit",
+      "description": "撰写与审计论文/报告的方法与结果章节。当需要把研究方案与数据变成符合报告规范的方法段与结果段、核对正文-表格-图之间的数字一致性、检查方法是否足以复现、或审计稿件方法与结果是否有缺失/夸大/不一致时使用。不负责结论与讨论的证据措辞校准（归 evidence-grading）；不做统计分析本身（归 statistical-inference）；不做引文管理（归 citation-integrity）。",
+      "path": "skills/methods-writing-audit",
+      "content_digest": "addc33e311f16745333983dc3bd80fc483ee98d39bd45552072cf181c534ffa7",
+      "file_count": 3,
+      "uncompressed_bytes": 8242
+    },
+    {
+      "id": "citation-integrity",
+      "name": "citation-integrity",
+      "display_name": "citation-integrity",
+      "description": "核查引用与参考文献的真实性、可验证性与支撑关系。当需要验证 DOI/PMID/PMID/URL 是否存在且指向正确内容、检查\"这句话是否真的由所引文献支撑\"、处理二手引用（转引）、统一参考文献格式、或审计稿件是否存在编造/错配/幽灵引用时使用。不检索新证据（归 literature-search-strategy）、不评价证据强度（归 evidence-grading）；纯格式排版（GB/T 7714 与 Vancouver 样式细节）只做要点指引，不逐条排版。",
+      "path": "skills/citation-integrity",
+      "content_digest": "9f6ff0942b0463e4e9bf59eb16cc15685a5f44a5370243aadcf512961fb63226",
+      "file_count": 3,
+      "uncompressed_bytes": 7936
+    }
+  ],
+  "connectors": []
+}

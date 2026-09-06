@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "specialist_id": "rwe-research-specialist",
+  "version": "1.0.0",
+  "source": {
+    "repository": "https://github.com/naiyixi/purescience-specialist-marketplace",
+    "commit": "f4e96d1c99513b3baf15e085ae4d111856e4825f",
+    "license": "MIT"
+  },
+  "artifact": {
+    "path": "releases/rwe-research-specialist-1.0.0.zip",
+    "github_release": {
+      "tag": "rwe-research-specialist-v1.0.0",
+      "asset_name": "rwe-research-specialist-1.0.0.zip"
+    },
+    "sha256": "216caf8faffc52ee94763a3470820b24c8f36c093b45d3e6db4b2445ec673b98",
+    "compressed_bytes": 36986,
+    "uncompressed_bytes": 51609,
+    "file_count": 17
+  },
+  "defaults": {
+    "skill_ids": [
+      "research-contract",
+      "study-design",
+      "statistical-inference",
+      "rwe-database-research",
+      "evidence-grading"
+    ],
+    "connector_ids": [
+      "pubmed",
+      "literature",
+      "clinical-trials",
+      "research-resources"
+    ]
+  },
+  "skills": [
+    {
+      "id": "research-contract",
+      "name": "research-contract",
+      "display_name": "research-contract",
+      "description": "建立并管理研究契约（Research Contract）——自主科研与受控研究的\"不可变层\"。当启动一项需要受控迭代、预算管理或多次执行的研究时，用本技能把研究问题、人群/干预/对照/结局、终点、数据源、分析与停止规则固化成契约；任何中途变更都必须走\"新版本契约\"流程而非静默修改。也用于审计一次执行是否遵守了既定契约。不替代单次问答（一次性咨询不需要契约）；检索与执行细节归对应技能。",
+      "path": "skills/research-contract",
+      "content_digest": "dee1de1bc974aabac1cd43b8ba5fb10aba2b4d3e9b0e2267927913de4d767537",
+      "file_count": 2,
+      "uncompressed_bytes": 5325
+    },
+    {
+      "id": "study-design",
+      "name": "study-design",
+      "display_name": "study-design",
+      "description": "设计研究方案（数据采集之前）：实验性设计（随机化、区组、分层、交叉、析因）与观察性设计（队列、病例对照、横断面）的选择与论证，混杂与偏倚控制、样本量与功效估算、伪重复防护。当用户要写研究方案/开题、设计试验或队列、估算样本量、评价一个既有设计是否会被混杂或偏倚毁掉时使用。不分析已采集数据（归 statistical-inference）；不做检索（归 literature-search-strategy）；不做剂量-暴露建模或真实世界数据库操作细节（归对应领域专包）。",
+      "path": "skills/study-design",
+      "content_digest": "e45fad672ba9e9914ff6023f0629f4c7d3f7c54a7d5d432f2071209de92a7f5b",
+      "file_count": 3,
+      "uncompressed_bytes": 9583
+    },
+    {
+      "id": "statistical-inference",
+      "name": "statistical-inference",
+      "display_name": "statistical-inference",
+      "description": "指导已采集数据的统计分析：检验选择、假设核查、效应量与置信区间、多重比较、稳健替代与透明报告。当数据已到手、需要决定\"用什么检验/模型、怎么报结果\"时使用；也用于审计他人分析（p 值是否被误读、假设是否核查、多重比较是否校正）。不负责研究设计（随机化/分组/样本量估算在设计阶段由 study-design 负责）、不做不确定度传播的数值审计（归 uncertainty-units-audit）、不做生物信息学专门分析（差异表达等归各领域专包）；纯概念问题直接回答，不必走全流程。",
+      "path": "skills/statistical-inference",
+      "content_digest": "05f2d6afbb7e903a81f8a4cc2b7a0d3ce05c771fe435467a9d93645efd4c28e6",
+      "file_count": 3,
+      "uncompressed_bytes": 9878
+    },
+    {
+      "id": "rwe-database-research",
+      "name": "rwe-database-research",
+      "display_name": "rwe-database-research",
+      "description": "设计真实世界数据库研究（电子病历/医保/注册库/医院数据）：把临床问题转成数据库可执行的研究方案——目标试验模拟、新用药者设计、活性对照、队列构建的操作化定义、时间窗、倾向评分等混杂控制、未测量混杂量化（E-value/阴性对照结局）、时间相关偏倚防护。当用户要用真实世界数据评价效果/安全性/结局、设计数据库队列、或审计一项真实世界研究是否存在指征混杂/不朽时间偏倚等致命缺陷时使用。不做药物警戒信号检测的专有方法（如需要另行声明）；数据来自用户提供的数据库提取物或获批数据源，不编造任何记录。",
+      "path": "skills/rwe-database-research",
+      "content_digest": "5e574b690e540bfcfbaf44059211d27095cd024a29a4a11f29c094851647112c",
+      "file_count": 3,
+      "uncompressed_bytes": 8415
+    },
+    {
+      "id": "evidence-grading",
+      "name": "evidence-grading",
+      "display_name": "evidence-grading",
+      "description": "对证据体做确定性分级并把论断措辞校准到与证据强度匹配。当需要判断\"这批证据支持什么强度的结论\"、写结论/摘要/新闻稿时选择\"证明/表明/提示/与…一致\"等措辞、按 GRADE 式维度（偏倚风险、不一致、间接性、不精确、发表偏倚 + 升级因素）评估证据体、或审计他人论断是否超证据时使用。不检索证据（归 literature-search-strategy）、不评价单篇方法学质量细节（那是质量评价工具环节，属循证证据综合专家专包）、不做统计计算（归 statistical-inference）。",
+      "path": "skills/evidence-grading",
+      "content_digest": "17946907e0bed1f9cca613173f4a7030eff0fc18c85a7b9df0392dfb11d4c169",
+      "file_count": 3,
+      "uncompressed_bytes": 8366
+    }
+  ],
+  "connectors": []
+}
