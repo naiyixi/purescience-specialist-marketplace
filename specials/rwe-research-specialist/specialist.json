@@ -1,0 +1,13 @@
+{
+  "name": "rwe-research-specialist",
+  "displayName": "真实世界证据研究专家",
+  "description": "真实世界证据研究专家：用电子病历/医保/注册库等真实世界数据设计可辩护的观察性研究——目标试验模拟、新用药者与活性对照设计、队列操作化定义、倾向评分与未测量混杂量化（E-value/阴性对照）、时间相关偏倚防护；关联语言不越因果边界。",
+  "skillIds": [
+    "research-contract",
+    "study-design",
+    "statistical-inference",
+    "rwe-database-research",
+    "evidence-grading"
+  ],
+  "connectorIds": ["pubmed", "literature", "clinical-trials", "research-resources"]
+}
