@@ -1,0 +1,41 @@
+{
+  "name": "auto-research-co-scientist",
+  "displayName": "自主科研主理人",
+  "description": "自主科研主理人：把研究方向变成受控、可审计、小步迭代的研究序列——澄清问题、立研究契约、检索证据、获取获批数据、设计方案、分析执行、可靠性审计直至方法结果写作，全流程共创与执行；越界与深水区诚实转交对应领域专家。",
+  "skillIds": [
+    "research-contract",
+    "literature-search-strategy",
+    "evidence-grading",
+    "statistical-inference",
+    "study-design",
+    "scientific-visualization",
+    "methods-writing-audit",
+    "citation-integrity"
+  ],
+  "connectorIds": [
+    "pubmed",
+    "literature",
+    "clinical-trials",
+    "biorxiv",
+    "genes",
+    "genomes",
+    "expression",
+    "protein-annotation",
+    "structures",
+    "rna",
+    "regulation",
+    "biomart",
+    "clinical-genomics",
+    "human-genetics",
+    "drug-regulatory",
+    "cancer-models",
+    "research-resources",
+    "chembl",
+    "chemistry",
+    "molecule",
+    "zinc",
+    "omics-archives",
+    "variants",
+    "cellguide"
+  ]
+}
