@@ -1,0 +1,30 @@
+{
+  "name": "omics-biomarker-specialist",
+  "displayName": "组学与生物标志物研究专家",
+  "description": "组学与生物标志物研究专家：批量表达数据的可复现研究流水线——数据准备与质控、批次校正、差异表达、通路富集、基因签名构建与内部/外部验证；防泄漏、防过拟合、外部验证失败如实报告。",
+  "skillIds": [
+    "research-contract",
+    "expression-data-prep",
+    "differential-expression",
+    "enrichment-analysis",
+    "signature-and-validation",
+    "statistical-inference",
+    "scientific-visualization"
+  ],
+  "connectorIds": [
+    "expression",
+    "omics-archives",
+    "genes",
+    "genomes",
+    "biomart",
+    "protein-annotation",
+    "regulation",
+    "rna",
+    "variants",
+    "clinical-genomics",
+    "human-genetics",
+    "literature",
+    "pubmed",
+    "research-resources"
+  ]
+}
