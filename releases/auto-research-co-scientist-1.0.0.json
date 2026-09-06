@@ -138,5 +138,126 @@
       "uncompressed_bytes": 7936
     }
   ],
-  "connectors": []
+  "connectors": [
+    {
+      "id": "pubmed",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "literature",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "clinical-trials",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "biorxiv",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "genes",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "genomes",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "expression",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "protein-annotation",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "structures",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "rna",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "regulation",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "biomart",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "clinical-genomics",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "human-genetics",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "drug-regulatory",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "cancer-models",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "research-resources",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "chembl",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "chemistry",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "molecule",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "zinc",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "omics-archives",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "variants",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "cellguide",
+      "required": false,
+      "default_selected": true
+    }
+  ]
 }

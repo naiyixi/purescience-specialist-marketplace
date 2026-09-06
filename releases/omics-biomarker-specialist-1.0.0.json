@@ -117,5 +117,76 @@
       "uncompressed_bytes": 7887
     }
   ],
-  "connectors": []
+  "connectors": [
+    {
+      "id": "expression",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "omics-archives",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "genes",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "genomes",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "biomart",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "protein-annotation",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "regulation",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "rna",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "variants",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "clinical-genomics",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "human-genetics",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "literature",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "pubmed",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "research-resources",
+      "required": false,
+      "default_selected": true
+    }
+  ]
 }

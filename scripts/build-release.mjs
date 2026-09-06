@@ -191,7 +191,11 @@ const release = {
   },
   defaults: { skill_ids: specialist.skillIds ?? [], connector_ids: specialist.connectorIds ?? [] },
   skills,
-  connectors: []
+  connectors: (specialist.connectorIds ?? []).map((id) => ({
+    id,
+    required: false,
+    default_selected: true
+  }))
 }
 writeFileSync(join(ROOT, 'releases', `${specialistId}-${version}.json`), JSON.stringify(release, null, 2) + '\n')
 

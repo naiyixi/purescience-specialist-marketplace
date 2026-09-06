@@ -84,5 +84,21 @@
       "uncompressed_bytes": 9394
     }
   ],
-  "connectors": []
+  "connectors": [
+    {
+      "id": "pubmed",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "literature",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "clinical-trials",
+      "required": false,
+      "default_selected": true
+    }
+  ]
 }
