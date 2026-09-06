@@ -1,0 +1,14 @@
+{
+  "name": "evidence-synthesis-specialist",
+  "displayName": "循证证据综合专家",
+  "description": "循证证据综合专家：把临床问题变成可审计的证据体——方案化检索、筛选、逐篇偏倚风险评价、数据提取、定量（Meta）或叙述性综合、证据确定性分级直至结论报告；可复现、可审计、结论措辞不超证据。",
+  "skillIds": [
+    "literature-search-strategy",
+    "evidence-quality-assessment",
+    "meta-analysis-methods",
+    "evidence-grading",
+    "citation-integrity",
+    "methods-writing-audit"
+  ],
+  "connectorIds": ["pubmed", "literature", "clinical-trials", "research-resources"]
+}
