@@ -55,6 +55,21 @@ const specialRoot = readFileSync(join(src, 'specialist.json'), 'utf8')
 const manifestDoc = JSON.parse(readFileSync(join(src, 'manifest.json'), 'utf8'))
 const specialist = JSON.parse(specialRoot)
 
+// Connector ids in marketplace docs/package must be hyphen-safe (protocol zod id regex
+// /^[a-z0-9][a-z0-9-]{0,127}$/ + package SAFE_ID /^[a-z0-9-]+$/) AND resolvable: only the
+// hyphen-safe subset of the app catalog is declarable (the snake_case ids are internal-only).
+const DECLARABLE_CONNECTORS = new Set([
+  'pubmed', 'literature', 'biorxiv', 'genes', 'genomes', 'expression', 'structures',
+  'rna', 'regulation', 'biomart', 'chembl', 'chemistry', 'molecule', 'zinc',
+  'variants', 'cellguide'
+])
+for (const cid of specialist.connectorIds ?? []) {
+  if (!/^[a-z0-9][a-z0-9-]{0,127}$/.test(cid) || !DECLARABLE_CONNECTORS.has(cid)) {
+    console.error(`ERROR: connector id "${cid}" is not a declarable hyphen-safe catalog id (see marketplace-publish-ops pitfall 4).`)
+    process.exit(1)
+  }
+}
+
 // ---- system prompt source resolution ----
 // Large prompts are authored as system-prompt.md next to specialist.json; when present it is
 // the canonical source and is injected into the packed specialist.json at build time.

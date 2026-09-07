@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "source": {
     "repository": "https://github.com/naiyixi/purescience-specialist-marketplace",
-    "commit": "8d3d05c19c69f6256a2111a759b85fe5dc0e7e58",
+    "commit": "d6eeac6179981880a9041265acb0732ccf3b45d3",
     "license": "MIT"
   },
   "artifact": {
@@ -13,7 +13,7 @@
       "tag": "pkpd-dose-designer-v1.0.0",
       "asset_name": "pkpd-dose-designer-1.0.0.zip"
     },
-    "sha256": "3316a6393aee1a2966992e4e8647e778bb6afe0f4dab39c3c65604a51dbe3f94",
+    "sha256": "ac127b7f0eb3be97c0add7cc03e07e5cff3200db624172cecf7a41533f30074d",
     "compressed_bytes": 31664,
     "uncompressed_bytes": 42847,
     "file_count": 14

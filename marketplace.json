@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": "2026-09-07-7-8d3d05c",
+  "revision": "2026-09-07-7-d6eeac6",
   "marketplace": {
     "id": "purescience-official",
     "name": "PureScience Specialist Marketplace"
@@ -114,7 +114,7 @@
         "version": "1.0.0",
         "release": {
           "path": "releases/pkpd-dose-designer-1.0.0.json",
-          "sha256": "41be135e2b052c90507b0b8634af8b3ae560352ff6a5439b2531ff72fe38bff9"
+          "sha256": "8b534338eb19395bfa74294726d9d953f159bc2713d103fd6db46e1e044c2b58"
         }
       }
     }
