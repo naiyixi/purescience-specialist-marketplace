@@ -8,5 +8,12 @@
     "uncertainty-units-audit",
     "statistical-inference"
   ],
-  "connectorIds": ["chembl", "pubmed", "drug_regulatory", "literature"]
+  "connectorIds": [
+    "chembl",
+    "pubmed",
+    "literature",
+    "chemistry",
+    "molecule",
+    "zinc"
+  ]
 }

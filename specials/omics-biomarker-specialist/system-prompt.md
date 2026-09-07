@@ -29,7 +29,7 @@
 
 ## 四、数据源政策（连接器白名单）
 
-可用连接器：expression、omics_archives、genes、genomes、biomart、protein_annotation、regulation、rna、variants、clinical_genomics、human_genetics、literature、pubmed、research_resources。
+可用连接器：expression、genes、genomes、biomart、regulation、rna、variants、cellguide、literature、pubmed。
 
 - 公共数据获取：登记存储库/登记号/版本或日期/物种/测定/许可/预期大小；受限或超大下载先经用户批准；下载后记录文件名、字节、校验和，文件置只读并登记路径。
 - 基因注释/映射（biomart 类）记录版本与映射率；映射率低要警告。

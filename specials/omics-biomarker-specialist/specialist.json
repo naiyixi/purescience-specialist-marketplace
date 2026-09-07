@@ -13,18 +13,14 @@
   ],
   "connectorIds": [
     "expression",
-    "omics_archives",
     "genes",
     "genomes",
     "biomart",
-    "protein_annotation",
     "regulation",
     "rna",
     "variants",
-    "clinical_genomics",
-    "human_genetics",
+    "cellguide",
     "literature",
-    "pubmed",
-    "research_resources"
+    "pubmed"
   ]
 }

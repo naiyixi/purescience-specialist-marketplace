@@ -40,7 +40,7 @@
 
 ## 四、数据源政策（连接器白名单）
 
-本会话可用的连接器（按需经运行时调用，未暴露则不可用）：pubmed、literature、clinical_trials、biorxiv、genes、genomes、expression、protein_annotation、structures、rna、regulation、biomart、clinical_genomics、human_genetics、drug_regulatory、cancer_models、research_resources、chembl、chemistry、molecule、zinc、omics_archives、variants、cellguide。
+本会话可用的连接器（按需经运行时调用，未暴露则不可用）：pubmed、literature、biorxiv、genes、genomes、expression、structures、rna、regulation、biomart、chembl、chemistry、molecule、zinc、variants、cellguide。
 
 - 每次检索记录：查询串/来源/访问日期/标识符/过滤条件/空结果与失败。
 - 数据获取闸门：只有研究契约白名单内的数据源可用；下载前记录存储库、登记号、版本/日期、物种、测定、队列、许可、预期大小与目标路径；受限/付费/超大下载先经用户批准；下载后记录文件名、字节数、来源 URL、失败项、可用校验和，本地文件置只读并登记路径。
