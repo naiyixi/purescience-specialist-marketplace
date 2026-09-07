@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "source": {
     "repository": "https://github.com/naiyixi/purescience-specialist-marketplace",
-    "commit": "8d3d05c19c69f6256a2111a759b85fe5dc0e7e58",
+    "commit": "f038822379cb16dc8d91b515f6ca8c10f124a018",
     "license": "MIT"
   },
   "artifact": {
@@ -13,10 +13,10 @@
       "tag": "omics-biomarker-specialist-v1.0.0",
       "asset_name": "omics-biomarker-specialist-1.0.0.zip"
     },
-    "sha256": "d3172a9b21821a147a813bb08beecb23f2ac3f91bd352f49aec4516de504111c",
-    "compressed_bytes": 40558,
-    "uncompressed_bytes": 53606,
-    "file_count": 20
+    "sha256": "30d8bdb1a97bea3dc309e51cff076e2c74916a834c6328081491de93076d99a1",
+    "compressed_bytes": 36014,
+    "uncompressed_bytes": 44679,
+    "file_count": 19
   },
   "defaults": {
     "skill_ids": [

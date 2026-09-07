@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "source": {
     "repository": "https://github.com/naiyixi/purescience-specialist-marketplace",
-    "commit": "8d3d05c19c69f6256a2111a759b85fe5dc0e7e58",
+    "commit": "f038822379cb16dc8d91b515f6ca8c10f124a018",
     "license": "MIT"
   },
   "artifact": {
@@ -13,10 +13,10 @@
       "tag": "clinical-study-designer-v1.0.0",
       "asset_name": "clinical-study-designer-1.0.0.zip"
     },
-    "sha256": "6bbb148c6b7fd35e1de221e9841ca16f1d8547f3dd8d407334087589d4ff8b78",
-    "compressed_bytes": 39010,
-    "uncompressed_bytes": 54349,
-    "file_count": 17
+    "sha256": "dc73edca63854791a087627d0a27d01d0fa96fa0e0a18b54b8cddb9525424350",
+    "compressed_bytes": 34440,
+    "uncompressed_bytes": 45120,
+    "file_count": 16
   },
   "defaults": {
     "skill_ids": [

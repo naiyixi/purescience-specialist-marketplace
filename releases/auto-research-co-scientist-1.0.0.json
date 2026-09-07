@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "source": {
     "repository": "https://github.com/naiyixi/purescience-specialist-marketplace",
-    "commit": "8d3d05c19c69f6256a2111a759b85fe5dc0e7e58",
+    "commit": "f038822379cb16dc8d91b515f6ca8c10f124a018",
     "license": "MIT"
   },
   "artifact": {
@@ -13,10 +13,10 @@
       "tag": "auto-research-co-scientist-v1.0.0",
       "asset_name": "auto-research-co-scientist-1.0.0.zip"
     },
-    "sha256": "fc0433577f6a30c307a5f99b2e35e814c14fe29b4e8d3602530a6b1c614882f2",
-    "compressed_bytes": 59739,
-    "uncompressed_bytes": 82186,
-    "file_count": 26
+    "sha256": "64daaaaf3287abba53696cfa0bc0a29c6a0a0250b4e4b6302daaba1e6321ac68",
+    "compressed_bytes": 52942,
+    "uncompressed_bytes": 68492,
+    "file_count": 25
   },
   "defaults": {
     "skill_ids": [

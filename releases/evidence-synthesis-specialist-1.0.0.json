@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "source": {
     "repository": "https://github.com/naiyixi/purescience-specialist-marketplace",
-    "commit": "8d3d05c19c69f6256a2111a759b85fe5dc0e7e58",
+    "commit": "f038822379cb16dc8d91b515f6ca8c10f124a018",
     "license": "MIT"
   },
   "artifact": {
@@ -13,10 +13,10 @@
       "tag": "evidence-synthesis-specialist-v1.0.0",
       "asset_name": "evidence-synthesis-specialist-1.0.0.zip"
     },
-    "sha256": "b62616b2c88b38b51a4b8fd8b2cae9cadd50de3efc27418f4fbbfa0acde6ffd7",
-    "compressed_bytes": 43495,
-    "uncompressed_bytes": 59175,
-    "file_count": 20
+    "sha256": "0d3728eac5e537ba5f7da2d8b0265724db3cbd60cf3d751ab67f11f390003ab0",
+    "compressed_bytes": 38436,
+    "uncompressed_bytes": 49098,
+    "file_count": 19
   },
   "defaults": {
     "skill_ids": [

@@ -155,7 +155,12 @@ for (const skillId of declaredSkillIds) {
 const srcEntries = walk(src)
   .filter((f) => {
     const rel = relative(src, f)
-    return rel !== '' && !rel.includes('/.') && !rel.startsWith(`skills${'/'.charAt(0)}`)
+    return (
+      rel !== '' &&
+      rel !== 'system-prompt.md' && // canonical prompt source: injected into specialist.json, never packed at top level (app validator: allowedTopLevel)
+      !rel.includes('/.') &&
+      !rel.startsWith(`skills${'/'.charAt(0)}`)
+    )
   })
   .map((f) => ({ abs: f, rel: relative(src, f) }))
 const packageFiles = [...srcEntries, ...skillEntries]
@@ -184,6 +189,7 @@ try {
     packed.systemPrompt = resolvedSystemPrompt
     writeFileSync(packedSpec, JSON.stringify(packed, null, 2) + '\n')
   }
+  execFileSync('rm', ['-f', zipAbs]) // zip -r appends to an existing archive; a removed source file would linger in stale entries
   execFileSync('zip', ['-q', '-r', '-X', zipAbs, '.'], { cwd: stage })
 } finally {
   rmSync(stage, { recursive: true, force: true })
