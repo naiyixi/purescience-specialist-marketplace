@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": "2026-09-07-7-f038822",
+  "revision": "2026-09-07-6-a363b53",
   "marketplace": {
     "id": "purescience-official",
     "name": "PureScience Specialist Marketplace"
@@ -19,22 +19,6 @@
         "release": {
           "path": "releases/example-researcher-1.0.0.json",
           "sha256": "491a573b12329353e6578eaf5ea0c80afffed20542443117d0cd45e14fa3cd82"
-        }
-      }
-    },
-    {
-      "id": "auto-research-co-scientist",
-      "display_name": "自主科研主理人",
-      "summary": "自主科研主理人：把研究方向变成受控、可审计、小步迭代的研究序列——澄清问题、立研究契约、检索证据、获取获批数据、设计方案、分析执行、可靠性审计直至方法结果写作，全流程共创与执行；越界与深水区诚实转交对应领域专家。",
-      "publisher": {
-        "id": "naiyixi",
-        "name": "Naiyixi"
-      },
-      "latest": {
-        "version": "1.0.0",
-        "release": {
-          "path": "releases/auto-research-co-scientist-1.0.0.json",
-          "sha256": "ff7aef4f54b5a0ceda0d007d9741e0bb902cba0c1f64d431e5b28cb4ddb7f061"
         }
       }
     },
@@ -98,7 +82,7 @@
         "version": "1.0.0",
         "release": {
           "path": "releases/rwe-research-specialist-1.0.0.json",
-          "sha256": "46ae4b306e75f07429b6921d93a905d54bd30c591a7d79180f7d63c197edad94"
+          "sha256": "786050a9da29df0f5370daafdf8dde008e73c07fad4aba99c775858401778b39"
         }
       }
     },

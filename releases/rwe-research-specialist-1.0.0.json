@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "source": {
     "repository": "https://github.com/naiyixi/purescience-specialist-marketplace",
-    "commit": "f038822379cb16dc8d91b515f6ca8c10f124a018",
+    "commit": "a363b53648373326562c87bf4e384776e90e990d",
     "license": "MIT"
   },
   "artifact": {
@@ -13,7 +13,7 @@
       "tag": "rwe-research-specialist-v1.0.0",
       "asset_name": "rwe-research-specialist-1.0.0.zip"
     },
-    "sha256": "8f0d8b6e79010cb836993327925ce35601ec347ace964f746d00034f8780e8d2",
+    "sha256": "f04bd3a55bf7b29e9ff4a9e1c6a39a6c7adcdc3020d73ca2b370f3b5228940a3",
     "compressed_bytes": 32506,
     "uncompressed_bytes": 42337,
     "file_count": 16
