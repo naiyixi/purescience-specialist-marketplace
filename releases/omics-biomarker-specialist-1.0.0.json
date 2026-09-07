@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "source": {
     "repository": "https://github.com/naiyixi/purescience-specialist-marketplace",
-    "commit": "a94b4605afad6efc1b3a7403e811d09a385f1519",
+    "commit": "8d3d05c19c69f6256a2111a759b85fe5dc0e7e58",
     "license": "MIT"
   },
   "artifact": {
@@ -13,9 +13,9 @@
       "tag": "omics-biomarker-specialist-v1.0.0",
       "asset_name": "omics-biomarker-specialist-1.0.0.zip"
     },
-    "sha256": "c84eeb02841e7ddf2a844bf396fc856a51c896c892215de36d88261373110246",
-    "compressed_bytes": 40685,
-    "uncompressed_bytes": 53794,
+    "sha256": "d3172a9b21821a147a813bb08beecb23f2ac3f91bd352f49aec4516de504111c",
+    "compressed_bytes": 40558,
+    "uncompressed_bytes": 53606,
     "file_count": 20
   },
   "defaults": {
@@ -30,19 +30,15 @@
     ],
     "connector_ids": [
       "expression",
-      "omics_archives",
       "genes",
       "genomes",
       "biomart",
-      "protein_annotation",
       "regulation",
       "rna",
       "variants",
-      "clinical_genomics",
-      "human_genetics",
+      "cellguide",
       "literature",
-      "pubmed",
-      "research_resources"
+      "pubmed"
     ]
   },
   "skills": [
@@ -124,11 +120,6 @@
       "default_selected": true
     },
     {
-      "id": "omics_archives",
-      "required": false,
-      "default_selected": true
-    },
-    {
       "id": "genes",
       "required": false,
       "default_selected": true
@@ -140,11 +131,6 @@
     },
     {
       "id": "biomart",
-      "required": false,
-      "default_selected": true
-    },
-    {
-      "id": "protein_annotation",
       "required": false,
       "default_selected": true
     },
@@ -164,12 +150,7 @@
       "default_selected": true
     },
     {
-      "id": "clinical_genomics",
-      "required": false,
-      "default_selected": true
-    },
-    {
-      "id": "human_genetics",
+      "id": "cellguide",
       "required": false,
       "default_selected": true
     },
@@ -180,11 +161,6 @@
     },
     {
       "id": "pubmed",
-      "required": false,
-      "default_selected": true
-    },
-    {
-      "id": "research_resources",
       "required": false,
       "default_selected": true
     }

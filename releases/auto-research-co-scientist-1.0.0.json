@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "source": {
     "repository": "https://github.com/naiyixi/purescience-specialist-marketplace",
-    "commit": "a94b4605afad6efc1b3a7403e811d09a385f1519",
+    "commit": "8d3d05c19c69f6256a2111a759b85fe5dc0e7e58",
     "license": "MIT"
   },
   "artifact": {
@@ -13,9 +13,9 @@
       "tag": "auto-research-co-scientist-v1.0.0",
       "asset_name": "auto-research-co-scientist-1.0.0.zip"
     },
-    "sha256": "4bf49ae7390a64a93a522b1276c5bd702042656cca902edca7dad41d1a4e9e97",
-    "compressed_bytes": 59966,
-    "uncompressed_bytes": 82522,
+    "sha256": "fc0433577f6a30c307a5f99b2e35e814c14fe29b4e8d3602530a6b1c614882f2",
+    "compressed_bytes": 59739,
+    "uncompressed_bytes": 82186,
     "file_count": 26
   },
   "defaults": {
@@ -32,26 +32,18 @@
     "connector_ids": [
       "pubmed",
       "literature",
-      "clinical_trials",
       "biorxiv",
       "genes",
       "genomes",
       "expression",
-      "protein_annotation",
       "structures",
       "rna",
       "regulation",
       "biomart",
-      "clinical_genomics",
-      "human_genetics",
-      "drug_regulatory",
-      "cancer_models",
-      "research_resources",
       "chembl",
       "chemistry",
       "molecule",
       "zinc",
-      "omics_archives",
       "variants",
       "cellguide"
     ]
@@ -150,11 +142,6 @@
       "default_selected": true
     },
     {
-      "id": "clinical_trials",
-      "required": false,
-      "default_selected": true
-    },
-    {
       "id": "biorxiv",
       "required": false,
       "default_selected": true
@@ -171,11 +158,6 @@
     },
     {
       "id": "expression",
-      "required": false,
-      "default_selected": true
-    },
-    {
-      "id": "protein_annotation",
       "required": false,
       "default_selected": true
     },
@@ -200,31 +182,6 @@
       "default_selected": true
     },
     {
-      "id": "clinical_genomics",
-      "required": false,
-      "default_selected": true
-    },
-    {
-      "id": "human_genetics",
-      "required": false,
-      "default_selected": true
-    },
-    {
-      "id": "drug_regulatory",
-      "required": false,
-      "default_selected": true
-    },
-    {
-      "id": "cancer_models",
-      "required": false,
-      "default_selected": true
-    },
-    {
-      "id": "research_resources",
-      "required": false,
-      "default_selected": true
-    },
-    {
       "id": "chembl",
       "required": false,
       "default_selected": true
@@ -241,11 +198,6 @@
     },
     {
       "id": "zinc",
-      "required": false,
-      "default_selected": true
-    },
-    {
-      "id": "omics_archives",
       "required": false,
       "default_selected": true
     },

@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "source": {
     "repository": "https://github.com/naiyixi/purescience-specialist-marketplace",
-    "commit": "a94b4605afad6efc1b3a7403e811d09a385f1519",
+    "commit": "8d3d05c19c69f6256a2111a759b85fe5dc0e7e58",
     "license": "MIT"
   },
   "artifact": {
@@ -13,9 +13,9 @@
       "tag": "pkpd-dose-designer-v1.0.0",
       "asset_name": "pkpd-dose-designer-1.0.0.zip"
     },
-    "sha256": "6450804af7a292e249348fc227519321f731df2af8c63f8a1a42cbb5743bd449",
-    "compressed_bytes": 31655,
-    "uncompressed_bytes": 42802,
+    "sha256": "3316a6393aee1a2966992e4e8647e778bb6afe0f4dab39c3c65604a51dbe3f94",
+    "compressed_bytes": 31664,
+    "uncompressed_bytes": 42847,
     "file_count": 14
   },
   "defaults": {
@@ -28,8 +28,10 @@
     "connector_ids": [
       "chembl",
       "pubmed",
-      "drug_regulatory",
-      "literature"
+      "literature",
+      "chemistry",
+      "molecule",
+      "zinc"
     ]
   },
   "skills": [
@@ -86,12 +88,22 @@
       "default_selected": true
     },
     {
-      "id": "drug_regulatory",
+      "id": "literature",
       "required": false,
       "default_selected": true
     },
     {
-      "id": "literature",
+      "id": "chemistry",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "molecule",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "zinc",
       "required": false,
       "default_selected": true
     }

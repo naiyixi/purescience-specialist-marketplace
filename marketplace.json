@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": "2026-09-06-7-a94b460",
+  "revision": "2026-09-07-7-8d3d05c",
   "marketplace": {
     "id": "purescience-official",
     "name": "PureScience Specialist Marketplace"
@@ -34,7 +34,7 @@
         "version": "1.0.0",
         "release": {
           "path": "releases/auto-research-co-scientist-1.0.0.json",
-          "sha256": "6a3abf4202ac1ee0eee78919c43c428fb205a14d408191c3b897e479a2395a35"
+          "sha256": "d0fb2bac5bdc0e0ab1fb50727b3dd91a1887362fc2eb237e17a152ea66ae0be3"
         }
       }
     },
@@ -50,7 +50,7 @@
         "version": "1.0.0",
         "release": {
           "path": "releases/evidence-synthesis-specialist-1.0.0.json",
-          "sha256": "69479430443b8e49d744e4ecc179fa48620705417275b9c29b3b6b487eba6396"
+          "sha256": "ee597b0bfd05cd43405087c344c58d80ef1a4e6b263a76b84593b78c1597b91d"
         }
       }
     },
@@ -66,7 +66,7 @@
         "version": "1.0.0",
         "release": {
           "path": "releases/clinical-study-designer-1.0.0.json",
-          "sha256": "bbd47ae0f8dad2c31ab0593bf90925de01057440f9b34de9a1057abf14f90a09"
+          "sha256": "d95722fed25b15fb64a21c97693b497611a2650e2d47e775351a6d8480879611"
         }
       }
     },
@@ -82,7 +82,7 @@
         "version": "1.0.0",
         "release": {
           "path": "releases/omics-biomarker-specialist-1.0.0.json",
-          "sha256": "d31f34a8f5f08b6cc079051edf5e06d8be5f09e7b61d2dce21d56207484682f9"
+          "sha256": "006689f1f077b15b4a12700302f9edaeaac3b75531bbb191054c45b3f124cefb"
         }
       }
     },
@@ -98,7 +98,7 @@
         "version": "1.0.0",
         "release": {
           "path": "releases/rwe-research-specialist-1.0.0.json",
-          "sha256": "4bf3f91d106e5c75d77ca48b5e651296342d469f051df99fffad8b15696178e4"
+          "sha256": "d9c4747e5af928b1c3543b981f2c1037c3d75f946e5395a6c331b325e02cb057"
         }
       }
     },
@@ -114,7 +114,7 @@
         "version": "1.0.0",
         "release": {
           "path": "releases/pkpd-dose-designer-1.0.0.json",
-          "sha256": "ddf623b6b932f3adfa0b96a56122e582f415bf6c547cc40cb3cf11aec2fc4b89"
+          "sha256": "41be135e2b052c90507b0b8634af8b3ae560352ff6a5439b2531ff72fe38bff9"
         }
       }
     }

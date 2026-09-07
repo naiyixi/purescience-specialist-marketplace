@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "source": {
     "repository": "https://github.com/naiyixi/purescience-specialist-marketplace",
-    "commit": "a94b4605afad6efc1b3a7403e811d09a385f1519",
+    "commit": "8d3d05c19c69f6256a2111a759b85fe5dc0e7e58",
     "license": "MIT"
   },
   "artifact": {
@@ -13,9 +13,9 @@
       "tag": "evidence-synthesis-specialist-v1.0.0",
       "asset_name": "evidence-synthesis-specialist-1.0.0.zip"
     },
-    "sha256": "e0d5a7e8216162f647ee6a9fff421a7a230dbf6f89d7830322a84e8e2c5d11af",
-    "compressed_bytes": 43520,
-    "uncompressed_bytes": 59185,
+    "sha256": "b62616b2c88b38b51a4b8fd8b2cae9cadd50de3efc27418f4fbbfa0acde6ffd7",
+    "compressed_bytes": 43495,
+    "uncompressed_bytes": 59175,
     "file_count": 20
   },
   "defaults": {
@@ -30,8 +30,7 @@
     "connector_ids": [
       "pubmed",
       "literature",
-      "clinical_trials",
-      "research_resources"
+      "biorxiv"
     ]
   },
   "skills": [
@@ -108,12 +107,7 @@
       "default_selected": true
     },
     {
-      "id": "clinical_trials",
-      "required": false,
-      "default_selected": true
-    },
-    {
-      "id": "research_resources",
+      "id": "biorxiv",
       "required": false,
       "default_selected": true
     }
