@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": "2026-09-07-6-a363b53",
+  "revision": "2026-11-18-12-3c609c9",
   "marketplace": {
     "id": "purescience-official",
     "name": "PureScience Specialist Marketplace"
@@ -99,6 +99,102 @@
         "release": {
           "path": "releases/pkpd-dose-designer-1.0.0.json",
           "sha256": "82cec72821aa435fcf4275989f38f7945297bb4035b456b0bf6470f35df3ea08"
+        }
+      }
+    },
+    {
+      "id": "radiology-imaging-expert",
+      "display_name": "影像诊断研究方法专家",
+      "summary": "影像诊断研究方法专家：把影像数据变成可辩护的诊断效能结论——成像序列与扫描参数、阅片者一致性与盲法、参考标准选择、诊断准确度指标与置信区间、影像组学与深度学习的过拟合与外部验证；不做临床诊断报告、不读片出结论。",
+      "publisher": {
+        "id": "naiyixi",
+        "name": "Naiyixi"
+      },
+      "latest": {
+        "version": "1.0.0",
+        "release": {
+          "path": "releases/radiology-imaging-expert-1.0.0.json",
+          "sha256": "5fbd3d860a1c2e2f24a45689ab7e4692757b10bae1fa11ec177fc7cc66ffb532"
+        }
+      }
+    },
+    {
+      "id": "pathology-molecular-expert",
+      "display_name": "病理与分子诊断专家",
+      "summary": "病理与分子诊断专家：把组织学与分子检测结果放进可辩护的研究与解读框架——取材与固定影响、免疫组化判读一致性、分子检测方法与检出限、变异注释与分级证据、报告规范；不签发病理报告、不给治疗选择。",
+      "publisher": {
+        "id": "naiyixi",
+        "name": "Naiyixi"
+      },
+      "latest": {
+        "version": "1.0.0",
+        "release": {
+          "path": "releases/pathology-molecular-expert-1.0.0.json",
+          "sha256": "01fe9504270f84e300a4684ad042c4afc7a6d3e51432142084f20e04bc05448b"
+        }
+      }
+    },
+    {
+      "id": "oncology-evidence-expert",
+      "display_name": "肿瘤诊疗证据评估专家",
+      "summary": "肿瘤诊疗证据评估专家：把试验结果转成可比较的疗效结论——终点定义（OS/PFS/ORR/DFS）、随访与删失、亚组与交互、间接比较的适用条件、获益-风险表述；不推荐个体治疗方案、不做处方与剂量建议。",
+      "publisher": {
+        "id": "naiyixi",
+        "name": "Naiyixi"
+      },
+      "latest": {
+        "version": "1.0.0",
+        "release": {
+          "path": "releases/oncology-evidence-expert-1.0.0.json",
+          "sha256": "95e2ef7884d4d59e69a7d0ba90ec0c53d67df9134faa8215f565abad73399a9d"
+        }
+      }
+    },
+    {
+      "id": "trial-statistics-expert",
+      "display_name": "临床试验统计与样本量专家",
+      "summary": "临床试验统计与样本量专家：把研究问题落成可执行的分析计划——主要终点与检验假设、样本量与把握度、随机与区组、中期分析与α分配、缺失数据与敏感性分析、多重性控制；不代写方案正文、不做数据监查决策。",
+      "publisher": {
+        "id": "naiyixi",
+        "name": "Naiyixi"
+      },
+      "latest": {
+        "version": "1.0.0",
+        "release": {
+          "path": "releases/trial-statistics-expert-1.0.0.json",
+          "sha256": "59e80e1da5e677d6efe7dd8eeb5c8a4108e991c4b59f87bb007b5de51c228532"
+        }
+      }
+    },
+    {
+      "id": "guideline-localization-expert",
+      "display_name": "指南本地化与临床路径专家",
+      "summary": "指南本地化与临床路径专家：把国际或国内指南转成本机构可执行的路径——推荐强度与证据等级核对、适用人群与资源前提、本地药物可及性与检查能力、路径节点与变异处理、审计指标；不代替医院药事与伦理审批。",
+      "publisher": {
+        "id": "naiyixi",
+        "name": "Naiyixi"
+      },
+      "latest": {
+        "version": "1.0.0",
+        "release": {
+          "path": "releases/guideline-localization-expert-1.0.0.json",
+          "sha256": "2ef558bef12a321cf0589b5ce9c807c0be77c10a58f242f132b4626a2e5dda1e"
+        }
+      }
+    },
+    {
+      "id": "tcm-evidence-expert",
+      "display_name": "中医药证据评价专家",
+      "summary": "中医药证据评价专家：把方剂、中成药与针灸的证据放到统一尺度上评价——随机与盲法可行性、复方批次一致性、证候诊断可重复性、结局指标与最小临床重要差异、经典文献与名医经验的证据定位；不给处方与剂量建议。",
+      "publisher": {
+        "id": "naiyixi",
+        "name": "Naiyixi"
+      },
+      "latest": {
+        "version": "1.0.0",
+        "release": {
+          "path": "releases/tcm-evidence-expert-1.0.0.json",
+          "sha256": "35dc81c8fa382a14d2933f88083ca388808a62c51d79abfacdda4345d13a998d"
         }
       }
     }

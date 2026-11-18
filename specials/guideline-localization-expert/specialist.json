@@ -1,0 +1,17 @@
+{
+  "name": "guideline-localization-expert",
+  "displayName": "指南本地化与临床路径专家",
+  "description": "指南本地化与临床路径专家：把国际或国内指南转成本机构可执行的路径——推荐强度与证据等级核对、适用人群与资源前提、本地药物可及性与检查能力、路径节点与变异处理、审计指标；不代替医院药事与伦理审批。",
+  "skillIds": [
+    "research-contract",
+    "evidence-grading",
+    "evidence-quality-assessment",
+    "literature-search-strategy",
+    "methods-writing-audit",
+    "chinese-journal-submission"
+  ],
+  "connectorIds": [
+    "pubmed",
+    "literature"
+  ]
+}

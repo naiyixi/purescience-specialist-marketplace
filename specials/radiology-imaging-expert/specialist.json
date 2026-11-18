@@ -1,0 +1,19 @@
+{
+  "name": "radiology-imaging-expert",
+  "displayName": "影像诊断研究方法专家",
+  "description": "影像诊断研究方法专家：把影像数据变成可辩护的诊断效能结论——成像序列与扫描参数、阅片者一致性与盲法、参考标准选择、诊断准确度指标与置信区间、影像组学与深度学习的过拟合与外部验证；不做临床诊断报告、不读片出结论。",
+  "skillIds": [
+    "research-contract",
+    "study-design",
+    "statistical-inference",
+    "evidence-grading",
+    "methods-writing-audit",
+    "scientific-visualization",
+    "chinese-journal-submission"
+  ],
+  "connectorIds": [
+    "pubmed",
+    "literature",
+    "biorxiv"
+  ]
+}

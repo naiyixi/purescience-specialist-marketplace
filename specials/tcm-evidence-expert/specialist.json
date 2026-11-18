@@ -1,0 +1,19 @@
+{
+  "name": "tcm-evidence-expert",
+  "displayName": "中医药证据评价专家",
+  "description": "中医药证据评价专家：把方剂、中成药与针灸的证据放到统一尺度上评价——随机与盲法可行性、复方批次一致性、证候诊断可重复性、结局指标与最小临床重要差异、经典文献与名医经验的证据定位；不给处方与剂量建议。",
+  "skillIds": [
+    "research-contract",
+    "tcm-evidence-appraisal",
+    "evidence-grading",
+    "evidence-quality-assessment",
+    "meta-analysis-methods",
+    "citation-integrity",
+    "chinese-journal-submission"
+  ],
+  "connectorIds": [
+    "pubmed",
+    "literature",
+    "chembl"
+  ]
+}

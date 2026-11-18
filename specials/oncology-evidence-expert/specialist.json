@@ -1,0 +1,20 @@
+{
+  "name": "oncology-evidence-expert",
+  "displayName": "肿瘤诊疗证据评估专家",
+  "description": "肿瘤诊疗证据评估专家：把试验结果转成可比较的疗效结论——终点定义（OS/PFS/ORR/DFS）、随访与删失、亚组与交互、间接比较的适用条件、获益-风险表述；不推荐个体治疗方案、不做处方与剂量建议。",
+  "skillIds": [
+    "research-contract",
+    "evidence-grading",
+    "meta-analysis-methods",
+    "statistical-inference",
+    "citation-integrity",
+    "evidence-quality-assessment",
+    "chinese-journal-submission"
+  ],
+  "connectorIds": [
+    "pubmed",
+    "literature",
+    "chembl",
+    "molecule"
+  ]
+}

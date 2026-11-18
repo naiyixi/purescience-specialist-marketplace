@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "specialist_id": "tcm-evidence-expert",
+  "version": "1.0.0",
+  "source": {
+    "repository": "https://github.com/naiyixi/purescience-specialist-marketplace",
+    "commit": "3c609c96a0e716b6540bd093f26e377811ad413e",
+    "license": "MIT"
+  },
+  "artifact": {
+    "path": "releases/tcm-evidence-expert-1.0.0.zip",
+    "github_release": {
+      "tag": "tcm-evidence-expert-v1.0.0",
+      "asset_name": "tcm-evidence-expert-1.0.0.zip"
+    },
+    "sha256": "e2df1bf2a09d62ccde044a873744294e396575622f37444c300b34f8bb9c3cd8",
+    "compressed_bytes": 29521,
+    "uncompressed_bytes": 40790,
+    "file_count": 17
+  },
+  "defaults": {
+    "skill_ids": [
+      "research-contract",
+      "tcm-evidence-appraisal",
+      "evidence-grading",
+      "evidence-quality-assessment",
+      "meta-analysis-methods",
+      "citation-integrity",
+      "chinese-journal-submission"
+    ],
+    "connector_ids": [
+      "pubmed",
+      "literature",
+      "chembl"
+    ]
+  },
+  "skills": [
+    {
+      "id": "research-contract",
+      "name": "research-contract",
+      "display_name": "research-contract",
+      "description": "建立并管理研究契约（Research Contract）——自主科研与受控研究的\"不可变层\"。当启动一项需要受控迭代、预算管理或多次执行的研究时，用本技能把研究问题、人群/干预/对照/结局、终点、数据源、分析与停止规则固化成契约；任何中途变更都必须走\"新版本契约\"流程而非静默修改。也用于审计一次执行是否遵守了既定契约。不替代单次问答（一次性咨询不需要契约）；检索与执行细节归对应技能。",
+      "path": "skills/research-contract",
+      "content_digest": "dee1de1bc974aabac1cd43b8ba5fb10aba2b4d3e9b0e2267927913de4d767537",
+      "file_count": 2,
+      "uncompressed_bytes": 5325
+    },
+    {
+      "id": "tcm-evidence-appraisal",
+      "name": "tcm-evidence-appraisal",
+      "display_name": "tcm-evidence-appraisal",
+      "description": "中医药证据的评价与表述（随机对照质量、盲法与安慰剂可行性、复方成分复杂性与批次一致性、证候诊断可重复性、结局指标与最小临床重要差异）。当需要评价中成药/方剂/针灸的证据强度、解读名医经验与经典文献、写中医药研究的方法学局限、或判断某结论能否用于临床表述时使用。不做个体处方与剂量建议、不做药物相互作用判断（转临床药师或说明书）。",
+      "path": "skills/tcm-evidence-appraisal",
+      "content_digest": "6bd09a80e02c0023c0de41299e9d1a04c1917657ade9dae1a6b99914463c5ed9",
+      "file_count": 1,
+      "uncompressed_bytes": 2387
+    },
+    {
+      "id": "evidence-grading",
+      "name": "evidence-grading",
+      "display_name": "evidence-grading",
+      "description": "对证据体做确定性分级并把论断措辞校准到与证据强度匹配。当需要判断\"这批证据支持什么强度的结论\"、写结论/摘要/新闻稿时选择\"证明/表明/提示/与…一致\"等措辞、按 GRADE 式维度（偏倚风险、不一致、间接性、不精确、发表偏倚 + 升级因素）评估证据体、或审计他人论断是否超证据时使用。不检索证据（归 literature-search-strategy）、不评价单篇方法学质量细节（那是质量评价工具环节，属循证证据综合专家专包）、不做统计计算（归 statistical-inference）。",
+      "path": "skills/evidence-grading",
+      "content_digest": "17946907e0bed1f9cca613173f4a7030eff0fc18c85a7b9df0392dfb11d4c169",
+      "file_count": 3,
+      "uncompressed_bytes": 8366
+    },
+    {
+      "id": "evidence-quality-assessment",
+      "name": "evidence-quality-assessment",
+      "display_name": "evidence-quality-assessment",
+      "description": "对纳入证据综合的单篇研究做方法学质量/偏倚风险评价。当系统评价或证据报告需要给每篇纳入研究判定偏倚风险（RCT 用 RoB 2、非随机干预用 ROBINS-I、诊断准确性用 QUADAS-2、观察性病因/预后用相应工具），需要逐域判定并给出理由、把域级结果汇总成研究级风险、或审计既有评价是否正确应用工具时使用。不做证据体分级（那是 evidence-grading 的 GRADE 式综合）、不做检索（归 literature-search-strategy）；对非系统评价场景的简单\"这篇文献可不可信\"提问，先确认是否需要正式工具，不需要就直接给结构化阅读意见。",
+      "path": "skills/evidence-quality-assessment",
+      "content_digest": "f3e5b93faf7439976619a513f86171ad515a19d8e48d022513795073e36a79e4",
+      "file_count": 2,
+      "uncompressed_bytes": 5844
+    },
+    {
+      "id": "meta-analysis-methods",
+      "name": "meta-analysis-methods",
+      "display_name": "meta-analysis-methods",
+      "description": "设计与执行 Meta 分析（效应量选择、异质性处理、合并模型、发表偏倚、敏感性分析）。当系统评价需要把多个研究数量合并、判断能否合并（临床与方法学同质性）、选择固定/随机效应模型、量化与解释异质性（I²/Tau²）、做亚组/Meta 回归、评估发表偏倚或复核他人 Meta 分析的方法是否正确时使用。不检索（归 literature-search-strategy）、不做单篇质量评价（归 evidence-quality-assessment）、不写最终结论措辞（归 evidence-grading）；原始数据不足以支撑的合并必须如实降级为叙述性综合。",
+      "path": "skills/meta-analysis-methods",
+      "content_digest": "88f7f2df8914edc03a3dec14de483ee46d155bc81bafc79281389c8c654bebd9",
+      "file_count": 3,
+      "uncompressed_bytes": 7712
+    },
+    {
+      "id": "citation-integrity",
+      "name": "citation-integrity",
+      "display_name": "citation-integrity",
+      "description": "核查引用与参考文献的真实性、可验证性与支撑关系。当需要验证 DOI/PMID/PMID/URL 是否存在且指向正确内容、检查\"这句话是否真的由所引文献支撑\"、处理二手引用（转引）、统一参考文献格式、或审计稿件是否存在编造/错配/幽灵引用时使用。不检索新证据（归 literature-search-strategy）、不评价证据强度（归 evidence-grading）；纯格式排版（GB/T 7714 与 Vancouver 样式细节）只做要点指引，不逐条排版。",
+      "path": "skills/citation-integrity",
+      "content_digest": "9f6ff0942b0463e4e9bf59eb16cc15685a5f44a5370243aadcf512961fb63226",
+      "file_count": 3,
+      "uncompressed_bytes": 7936
+    },
+    {
+      "id": "chinese-journal-submission",
+      "name": "chinese-journal-submission",
+      "display_name": "chinese-journal-submission",
+      "description": "按中文期刊与国内基金口径准备稿件与材料（中华医学会系列稿约、GB/T 7714 参考文献、基金标注、伦理批件表述、统计学描述规范）。当需要把中文研究写成可投稿稿件、核对稿约格式、整理中文参考文献、写伦理与知情同意表述、或审计中文稿件是否踩到常见退稿点时使用。不决定研究设计（归 study-design）、不做证据分级（归 evidence-grading）、不替代目标期刊的最新稿约原文。",
+      "path": "skills/chinese-journal-submission",
+      "content_digest": "e81539c2bbf975c9f9943d879535208fce8606cb6f4e2171a2363d2b8108393a",
+      "file_count": 1,
+      "uncompressed_bytes": 2405
+    }
+  ],
+  "connectors": [
+    {
+      "id": "pubmed",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "literature",
+      "required": false,
+      "default_selected": true
+    },
+    {
+      "id": "chembl",
+      "required": false,
+      "default_selected": true
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "trial-statistics-expert",
+  "displayName": "临床试验统计与样本量专家",
+  "description": "临床试验统计与样本量专家：把研究问题落成可执行的分析计划——主要终点与检验假设、样本量与把握度、随机与区组、中期分析与α分配、缺失数据与敏感性分析、多重性控制；不代写方案正文、不做数据监查决策。",
+  "skillIds": [
+    "research-contract",
+    "study-design",
+    "statistical-inference",
+    "protocol-authoring",
+    "methods-writing-audit",
+    "scientific-visualization"
+  ],
+  "connectorIds": [
+    "pubmed",
+    "literature",
+    "biorxiv"
+  ]
+}
